@@ -4,91 +4,106 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>WebStudio | Main</title>
-    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/style.css" />
   </head>
   <body>
     <header class="header">
-      <h1>WebStudio</h1>
-      <ul>
-      <li><a href="https://kasked-sys.github.io/beautiful-Hello-World-plus/" target="_blank">Студія</a></li>
-      <li><a href="./portfolio.html">Портфоліо</a></li>
-      <li><a href="https://kasked-sys.github.io/beautiful-Hello-World-plus/" target="_blank">Контакти</a></li>
-      </ul>
-      <ul>
-      <li><a href="https://kasked-sys.github.io/beautiful-Hello-World-plus/" target="_blank">info@devstudio.com</a></li>
-      <li><a href="https://kasked-sys.github.io/beautiful-Hello-World-plus/" target="_blank">+38 096 111 11 11</a></li>
-      </ul>
-    </header>
-    <main>
-    <section class="hero">
-    <h1>Ефективні рішення для вашого бізнесу</h1>
-    <button type="button">Замовити послугу</button> 
-    </section>
-    <section class="section">
-      <ul>
-        <li>
-          <h3>УВАГА ДО ДЕТАЛІВ</h3>
-          <p>
-          Ідейні міркування, і навіть початок повсякденної роботи з формування
-          позиції. </p>
-        </li>
-        <li>  
-          <h3>ПУНКТУАЛЬНІСТЬ</h3>
-          <p>
-          Завдання організації, особливо рамки і місце навчання кадрів тягне у
-          себе. </p>
-        </li>
-        <li>
-          <h3>ПЛАНУВАННЯ</h3>
-          <p>Так само консультація з широким активом значною мірою зумовлює.</p>
-        </li>
-        <li>
-          <h3>СУЧАСНІ ТЕХНОЛОГІЇ</h3>
-        <p>
-          Значимість цих проблем настільки очевидна, що реалізація планових
-          завдань.
-        </p>
-        </li>
-      </ul>
-    </section>
+      <div class="container header-inner">
+        <a href="./index.html" class="logo"><h1>WebStudio</h1></a>
 
-    <section class="section">
-      <div class="img-box">
-        <h2>Чим ми займаємося</h2>
-        <ul>
-        <li><img src="./images/programming.png" alt="programming"></li>
-        <li><img src="./images/ENBAPP.png" alt="ENBAPP"></li>
-        <li><img src="./images/designing.png" alt="designing"></li>
-        </ul>
+        <nav class="main-nav" aria-label="Головне меню">
+          <ul>
+            <li><a href="https://kasked-sys.github.io/beautiful-Hello-World-plus/" target="_blank" rel="noopener">Студія</a></li>
+            <li><a href="./portfolio.html">Портфоліо</a></li>
+            <li><a href="https://kasked-sys.github.io/beautiful-Hello-World-plus/" target="_blank" rel="noopener">Контакти</a></li>
+          </ul>
+        </nav>
+
+        <div class="contacts">
+          <ul>
+            <li><a href="mailto:info@devstudio.com">info@devstudio.com</a></li>
+            <li><a href="tel:+380961111111">+38 096 111 11 11</a></li>
+          </ul>
+        </div>
       </div>
-    </section>
+    </header>
 
-    <section class="command">
-      <ul class="command">
-      <h1 class="command-title">Наша команда</h1>
-      <img class="command-image" src="./images/igor.png" alt="">
-      <h2 class="command-item">Ігор Дем'яненко</h5>
-      <p class="command-subtitle">Product Designer</p>
-      <img class="command-image" src="./images/olga.png" alt="">
-      <h2 class="command-item">Ольга Рєпіна</h2>
-      <p class="command-subtitle">Frontend Developer</p>
-      <img class="command-image" src="./images/mikola.png" alt="">
-      <h2 class="command-item">Микола Тарасов</h2>
-      <p class="command-subtitle">Marketing</p>
-      <img src="./images/mixail.png" alt="">
-      <h2 class="command-item">Михайло Єрмаков</h2>
-      <p class="command-subtitle">UI Designer</p>
-      </ul>
-    </section>
+    <main>
+      <section class="hero">
+        <h2>Ефективні рішення для вашого бізнесу</h2>
+        <button type="button">Замовити послугу</button>
+      </section>
 
+      <section class="section features">
+        <ul>
+          <li>
+            <h3>УВАГА ДО ДЕТАЛІВ</h3>
+            <p>Ідейні міркування, і навіть початок повсякденної роботи з формування позиції.</p>
+          </li>
+          <li>
+            <h3>ПУНКТУАЛЬНІСТЬ</h3>
+            <p>Завдання організації, особливо рамки і місце навчання кадрів тягне у себе.</p>
+          </li>
+          <li>
+            <h3>ПЛАНУВАННЯ</h3>
+            <p>Так само консультація з широким активом значною мірою зумовлює.</p>
+          </li>
+          <li>
+            <h3>СУЧАСНІ ТЕХНОЛОГІЇ</h3>
+            <p>Значимість цих проблем настільки очевидна, що реалізація планових завдань.</p>
+          </li>
+        </ul>
+      </section>
+
+      <section class="section services">
+        <div class="img-box">
+          <h2>Чим ми займаємося</h2>
+          <ul class="services-list">
+            <li><img src="./images/programming.png" alt="Програмування" /></li>
+            <li><img src="./images/ENBAPP.png" alt="Розробка додатків" /></li>
+            <li><img src="./images/designing.png" alt="Дизайн" /></li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="team section">
+        <h2 class="team-title">Наша команда</h2>
+
+        <ul class="team-list">
+          <li class="team-member">
+            <img class="team-image" src="./images/igor.png" alt="Ігор Дем'яненко — Product Designer" />
+            <h3 class="team-name">Ігор Дем'яненко</h3>
+            <p class="team-role">Product Designer</p>
+          </li>
+
+          <li class="team-member">
+            <img class="team-image" src="./images/olga.png" alt="Ольга Рєпіна — Frontend Developer" />
+            <h3 class="team-name">Ольга Рєпіна</h3>
+            <p class="team-role">Frontend Developer</p>
+          </li>
+
+          <li class="team-member">
+            <img class="team-image" src="./images/mikola.png" alt="Микола Тарасов — Marketing" />
+            <h3 class="team-name">Микола Тарасов</h3>
+            <p class="team-role">Marketing</p>
+          </li>
+
+          <li class="team-member">
+            <img class="team-image" src="./images/mixail.png" alt="Михайло Єрмаков — UI Designer" />
+            <h3 class="team-name">Михайло Єрмаков</h3>
+            <p class="team-role">UI Designer</p>
+          </li>
+        </ul>
+      </section>
     </main>
+
     <footer class="footer" id="contacts">
-      <div class="conteiner">
+      <div class="container">
         <a href="./index.html" class="logo">WebStudio</a>
         <ul class="footer-list">
-        <li class="foot-list-item"><p>м. Київ, пр-т Лесі Українки, 26</p></li>
-        <li class="foot-list-item"><p>info@devstudio.com</p></li>
-        <li class="foot-list-item"><p>+38 096 111 11 11</p></li>
+          <li class="foot-list-item"><p>м. Київ, пр-т Лесі Українки, 26</p></li>
+          <li class="foot-list-item"><p><a href="mailto:info@devstudio.com">info@devstudio.com</a></p></li>
+          <li class="foot-list-item"><p><a href="tel:+380961111111">+38 096 111 11 11</a></p></li>
         </ul>
       </div>
     </footer>
