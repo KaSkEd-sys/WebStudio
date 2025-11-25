@@ -1,6 +1,9 @@
 :root {
-    --button: #2196F3;
+    --button: #2196F3;  
     --header-foot-bg: #2F303A;
-    --text: #757575;
+    --subtext: #757575;
     --command-bg: #F5F4FA;
+    --text: #FFFFFF;
+    --black: #000000;
+    --command-text: #212121;
 }
