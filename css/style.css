@@ -7,3 +7,22 @@
     --black: #000000;
     --command-text: #212121;
 }
+
+.logo {
+    font-family: "RaleWay";
+    font-weight: 700;
+}
+
+.main-nav {
+    font-family: "Roboto";
+    font-weight: 500;
+}
+
+.contacts {
+    font-family: "Roboto";
+    font-weight: 500;
+}
+
+.section future {
+
+}
