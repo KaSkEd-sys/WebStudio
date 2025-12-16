@@ -17,6 +17,16 @@ body {
     font-weight: 700;
 }
 
-h2 {
+.hero-title {
+    font-family: "Roboto";
+    line-height: 1.36;
+    font-weight: 900;
+}
+
+.features {
+    font-family: "Roboto";
+}
+
+.team {
     font-family: "Roboto";
 }
