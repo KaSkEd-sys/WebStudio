@@ -8,12 +8,17 @@
     --command-text: #212121;
 }
 
+.services {
+    padding-top: 94px;
+    padding-bottom: 94px;
+}
+
 body {
     font-family: "Roboto";
 }
 
 .logo {
-    font-family: "RaleWay";
+    font-family: "Raleway";
     font-weight: 700;
 }
 
@@ -25,8 +30,21 @@ body {
 
 .features {
     font-family: "Roboto";
+    padding-top: 94px;
+    padding-bottom: 94px;
 }
 
 .team {
     font-family: "Roboto";
+    padding-top: 94px;
+    padding-bottom: 94px;
+}
+
+
+.container {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
 }
