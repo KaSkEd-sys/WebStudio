@@ -49,6 +49,7 @@ body {
     padding-bottom: 94px;
 }
 
+
 .team-title {
     font-weight: 700;
     font-size: 36px;
@@ -59,6 +60,10 @@ body {
     font-family: "Roboto";
     padding-top: 94px;
     padding-bottom: 94px;
+}
+
+.nav-list {
+    flex-direction: row;
 }
 
 .services-title {
@@ -82,10 +87,13 @@ body {
 }
 
 .features-item-title {
+    display: flex;
     font-weight: 700;
     font-size: 14px;
     line-height: 100%;
     letter-spacing: 3%;
+    justify-content: center;
+    flex-direction: row-reverse;
 }
 
 .features-item-text {
