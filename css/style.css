@@ -24,184 +24,6 @@ body {
     padding-right: 15px;
 }
 
-
-.header-inner {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.logo {
-    font-family: "Raleway";
-    font-weight: 700;
-}
-
-.nav-list {
-    display: flex;
-    flex-direction: row;
-    gap: 50px;
-}
-
-.nav-item {
-    color: var(--command-text);
-    font-family: "Roboto";
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 1.5;
-    letter-spacing: 0.02em;
-}
-
-.contact-list {
-    display: flex;
-    gap: 50px;
-}
-
-
-.hero {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.hero-title {
-    font-weight: 900;
-    font-size: 44px;
-    line-height: 1.36;
-    letter-spacing: 0.06em;
-}
-
-.hero-btn {
-    margin: 0 auto;
-    display: block;
-    justify-content: center;
-}
-
-
-.features {
-    font-family: "Roboto";
-    padding-top: 94px;
-    padding-bottom: 94px;
-}
-
-.features-list {
-    display: flex;
-    gap: 30px;
-}
-
-.features-item {
-    flex: 1;
-}
-
-.features-item-title {
-    font-weight: 700;
-    font-size: 14px;
-    line-height: 100%;
-    letter-spacing: 3%;
-}
-
-.features-item-text {
-    color: var(--subtext);
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 24px;
-    letter-spacing: 3%;
-}
-
-
-.services {
-    padding-top: 94px;
-    padding-bottom: 94px;
-}
-
-.services-title {
-    text-align: center;
-    font-size: 36px;
-    margin-bottom: 50px;
-}
-
-.services-list {
-    display: flex;
-    justify-content: space-between;
-    gap: 30px;
-}
-
-.services-item {
-    flex: 1;
-}
-
-
-.team {
-    font-family: "Roboto";
-    padding-top: 94px;
-    padding-bottom: 94px;
-}
-
-.team-title {
-    font-weight: 700;
-    font-size: 36px;
-    line-height: 100%;
-    text-align: center;
-    margin-bottom: 50px;
-}
-
-.team-list {
-    display: flex;
-    gap: 30px;
-    justify-content: space-between;
-}
-
-.team-member {
-    flex: 1;
-    text-align: center;
-}
-
-.team-name {
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 100%;
-    letter-spacing: 3%;
-    color: var(--command-text);
-}
-
-.team-role {
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 100%;
-    letter-spacing: 3%;
-    color: var(--subtext);
-}
-.footer-list {
-    display: flex;
-    flex-direction: column;
-    gap: 9px;
-}
-
-:root {
-    --button: #2196F3;  
-    --header-foot-bg: #2F303A;
-    --subtext: #757575;
-    --command-bg: #F5F4FA;
-    --text: #FFFFFF;
-    --black: #000000;
-    --command-text: #212121;
-}
-
-body {
-    font-family: "Roboto";
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 100%;
-    letter-spacing: 0.03em;
-}
-
-.container {
-    max-width: 1200px;
-    margin-left: auto;
-    margin-right: auto;
-    padding-left: 15px;
-    padding-right: 15px;
-}
-
 /* HEADER */
 .header-inner {
     display: flex;
@@ -254,6 +76,7 @@ body {
     justify-content: center;
 }
 
+
 /* FEATURES */
 .features {
     font-family: "Roboto";
@@ -285,7 +108,7 @@ body {
     letter-spacing: 3%;
 }
 
-
+/* SERVICES */
 .services {
     padding-top: 94px;
     padding-bottom: 94px;
@@ -369,7 +192,6 @@ body {
     padding: 6px 22px;
     background-color: var(--command-bg);
     color: var(--command-text);
-    border: none;
     border-radius: 4px;
     cursor: pointer;
 }
@@ -398,3 +220,17 @@ body {
     margin-top: 20px;
 }
 
+.card .subtitle {
+    font-size: 16px;
+    line-height: 1.87;
+    letter-spacing: 0.03em;
+    color: var(--subtext);
+    margin-top: 4px;
+}
+
+/* FOOTER */
+.footer-list {
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+}
