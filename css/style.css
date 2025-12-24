@@ -6,6 +6,13 @@
     --text: #FFFFFF;
     --black: #000000;
     --command-text: #212121;
+    --container-bg: #EEEEEE;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
 }
 
 body {
@@ -32,6 +39,17 @@ body {
 }
 
 .logo {
+    display: inline-block;
+    font-family: "Raleway";
+    font-weight: 700;
+    color: var(--button);
+    font-size: 26px;
+}
+
+.logo::after {
+    display: inline;
+    content: "Studio";
+    color: var(--black);
     font-family: "Raleway";
     font-weight: 700;
 }
@@ -42,8 +60,14 @@ body {
     gap: 50px;
 }
 
-.nav-item {
+.main-nav a{
     color: var(--command-text);
+}
+.main-nav a:hover {
+    color: var(--button);
+}
+
+.nav-item {
     font-family: "Roboto";
     font-weight: 500;
     font-size: 14px;
@@ -54,6 +78,14 @@ body {
 .contact-list {
     display: flex;
     gap: 50px;
+}
+
+.contact-item a{
+    color: var(--subtext);
+}
+
+.contact-item a:hover {
+    color: var(--button);
 }
 
 /* HERO */
@@ -167,9 +199,12 @@ body {
 
 /* TEAM */
 .team {
+    display: block;
     font-family: "Roboto";
     padding-top: 94px;
     padding-bottom: 94px;
+    gap: 30px;
+    border: 1px solid var(--container-bg);
 }
 
 .team-title {
@@ -182,13 +217,23 @@ body {
 
 .team-list {
     display: flex;
-    gap: 30px;
     justify-content: space-between;
+    gap: 30px;
 }
 
 .team-member {
     flex: 1;
     text-align: center;
+    width: 270px;
+    height: 380px;
+    background: var(--text);
+    border-radius: 0 0 4px 4px;
+    box-shadow: 
+        0px 1px 0px 0px rgba(0, 0, 0, 0.20),
+        0px 1px 1px 0px rgba(0, 0, 0, 0.14),
+        0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+    box-sizing: content-box;
+
 }
 
 .team-name {
@@ -233,8 +278,21 @@ body {
     padding: 6px 22px;
     background-color: var(--command-bg);
     color: var(--command-text);
+    border: none;
     border-radius: 4px;
     cursor: pointer;
+    color: var(--command-text);
+    font-family: "Roboto";
+}
+
+.btn-item button:hover {
+    background-color: var(--button);
+    color: var(--text);
+    font-weight: 500;
+    box-shadow: 
+        0px 2px 2px 0px rgba(0, 0, 0, 0.12),
+        0px 1px 2px 0px rgba(0, 0, 0, 0.08),
+        0px 3px 1px 0px rgba(0, 0, 0, 0.10);
 }
 
 .main {
@@ -242,9 +300,34 @@ body {
 }
 
 .main-list {
-    display: flex;
+    display: grid;
     flex-wrap: wrap;
+    grid-template-columns: repeat(3, 1fr);
     gap: 30px;
+    padding-right: 30px;
+}
+
+.card .subtitle {
+    margin-bottom: 0;
+}
+
+.card {
+    width: 370px;
+    height: 404px;
+    border: 1px solid var(--container-bg);
+    box-sizing: border-box;
+
+    display: flex;
+    flex-direction: column;
+}
+
+
+.card:hover {
+    box-shadow: 
+        0px 1px 1px 0px rgba(0, 0, 0, 0.12),
+        0px 4px 4px 0px rgba(0, 0, 0, 0.06),
+        1px 4px 6px 0px rgba(0, 0, 0, 0.16);
+
 }
 
 .card img {
@@ -258,7 +341,8 @@ body {
     line-height: 2;
     letter-spacing: 0.06em;
     color: var(--command-text);
-    margin-top: 20px;
+
+    margin: 20px 0 4px 24px;
 }
 
 .card .subtitle {
@@ -266,7 +350,10 @@ body {
     line-height: 1.87;
     letter-spacing: 0.03em;
     color: var(--subtext);
-    margin-top: 4px;
+    margin: 0;
+    padding-left: 24px;
+    margin-top: auto;
+    padding-bottom: 20px;
 }
 
 /* FOOTER */
