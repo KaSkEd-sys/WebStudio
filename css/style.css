@@ -168,7 +168,7 @@ body {
 }
 
 .features-item {
-    position: relative; /* Родительский элемент для абсолютного позиционирования */
+    position: relative; 
     padding-top: 150px;
     text-align: center;
 }
