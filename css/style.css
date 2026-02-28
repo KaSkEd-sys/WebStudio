@@ -168,42 +168,37 @@ body {
 }
 
 .features-item {
-    position: relative; 
-    padding-top: 150px;
     text-align: center;
+    flex: 1;
 }
 
 .features-item::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 50%;
-    width: 270px;
-    height: 120px;
-    transform: translateX(-50%);
-    background-color: var(--command-bg);
-    border-radius: 4px;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 70px 70px;
-    z-index: 0;
+    display: none;
 }
 
-.features-item img {
-    position: absolute; 
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
+.features-icon-box {
+    width: 270px;
+    height: 120px;
+    max-width: 100%; /* ← добавь это */
+    background-color: var(--command-bg);
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.features-icon-box img {
     width: 70px;
     height: 70px;
-    margin-top: 25px;
 }
 
 .features-item-title {
     font-weight: 700;
     font-size: 14px;
     line-height: 100%;
-    letter-spacing: 3%;
+    letter-spacing: 0.03em;
+    margin-bottom: 10px;
 }
 
 .features-item-text {
@@ -211,7 +206,7 @@ body {
     font-weight: 400;
     font-size: 14px;
     line-height: 24px;
-    letter-spacing: 3%;
+    letter-spacing: 0.03em;
 }
 
 /* SERVICES */
@@ -220,10 +215,39 @@ body {
     padding-bottom: 94px;
 }
 
+.services-item img {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
 .services-title {
     text-align: center;
     font-size: 36px;
     margin-bottom: 50px;
+}
+
+
+
+.services-label {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+
+  width: 100%;
+  height: 70px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: rgba(47, 48, 58, 0.8);
+  color: #fff;
+
+  font-weight: 700;
+  font-size: 14px;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
 }
 
 .services-list {
@@ -233,7 +257,9 @@ body {
 }
 
 .services-item {
-    flex: 1;
+    position: relative;
+    overflow: hidden;
+
 }
 
 /* TEAM */
