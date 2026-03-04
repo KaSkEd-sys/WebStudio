@@ -76,6 +76,22 @@ body {
     letter-spacing: 0.02em;
 }
 
+.nav-item a.active {
+    color: var(--button);
+    position: relative;
+}
+
+.nav-item a.active::after {
+    content: '';
+    position: absolute;
+    bottom: -26px;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background-color: var(--button);
+    border-radius: 2px;
+}
+
 .contact-list {
     display: flex;
     gap: 50px;
@@ -563,6 +579,34 @@ body {
 /* PORTFOLIO PAGE */
 .portfolio {
     padding-top: 94px;
+}
+
+.card-thumb {
+    position: relative;
+    overflow: hidden;
+}
+
+.card-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(33, 150, 243, 0.9);
+    padding: 63px 24px;
+    transform: translateY(100%);
+    transition: transform 0.3s ease;
+}
+
+.card-overlay-text {
+    font-size: 18px;
+    line-height: 1.56;
+    letter-spacing: 0.03em;
+    color: #FFFFFF;
+}
+
+.card:hover .card-overlay {
+    transform: translateY(0);
 }
 
 .btn-list {

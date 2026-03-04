@@ -9,7 +9,6 @@
     <link rel="stylesheet" href="./css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Bilbo+Swash+Caps&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto+Slab:wght@100..900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-
 </head>
 <body>
   <header class="header">
@@ -19,7 +18,7 @@
       <nav class="main-nav" aria-label="Головне меню">
         <ul class="nav-list">
           <li class="nav-item"><a href="/index.html">Студія</a></li>
-          <li class="nav-item"><a href="/portfolio.html">Портфоліо</a></li>
+          <li class="nav-item"><a href="./portfolio.html" class="active">Портфоліо</a></li>
           <li class="nav-item"><a href="#">Контакти</a></li>
         </ul>
       </nav>
@@ -32,7 +31,8 @@
       </div>
     </div>
   </header>
-    <section class="portfolio">
+
+  <section class="portfolio">
     <ul class="btn-list" role="tablist" aria-label="Фільтр робіт">
       <li class="btn-item"><button type="button">Усі</button></li>
       <li class="btn-item"><button type="button">Веб-Сайти</button></li>
@@ -41,73 +41,121 @@
       <li class="btn-item"><button type="button">Маркетинг</button></li>
     </ul>
 
-  <main class="main" id="main-content">
-    <ul class="main-list">
-      <li class="card">
-        <img src="./images/TechnoCrack.png" alt="TechnoCrack — превью сайту">
-        <h2>ТехноКряк</h2>
-        <p class="subtitle">Веб-сайт</p>
-      </li>
+    <main class="main" id="main-content">
+      <ul class="main-list">
 
-      <li class="card">
-        <img src="./images/Poster.png" alt="Постер New Orlean vs Golden Star">
-        <h2>Постер New Orlean vs Golden Star</h2>
-        <p class="subtitle">Дизайн</p>
-      </li>
+        <li class="card">
+          <div class="card-thumb">
+            <img src="./images/TechnoCrack.png" alt="TechnoCrack — превью сайту">
+            <div class="card-overlay">
+              <p class="card-overlay-text">Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи приватну особу.</p>
+            </div>
+          </div>
+          <h2>ТехноКряк</h2>
+          <p class="subtitle">Веб-сайт</p>
+        </li>
 
-      <li class="card">
-        <img src="./images/Rest.png" alt="Ресторан Seafood — мобільний додаток">
-        <h2>Ресторан Seafood</h2>
-        <p class="subtitle">Додаток</p>
-      </li>
+        <li class="card">
+          <div class="card-thumb">
+            <img src="./images/Poster.png" alt="Постер New Orlean vs Golden Star">
+            <div class="card-overlay">
+              <p class="card-overlay-text">Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи приватну особу.</p>
+            </div>
+          </div>
+          <h2>Постер New Orlean vs Golden Star</h2>
+          <p class="subtitle">Дизайн</p>
+        </li>
 
-      <li class="card">
-        <img src="./images/Prime.png" alt="Проєкт Prime — маркетинг">
-        <h2>Проєкт Prime</h2>
-        <p class="subtitle">Маркетинг</p>
-      </li>
+        <li class="card">
+          <div class="card-thumb">
+            <img src="./images/Rest.png" alt="Ресторан Seafood — мобільний додаток">
+            <div class="card-overlay">
+              <p class="card-overlay-text">Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи приватну особу.</p>
+            </div>
+          </div>
+          <h2>Ресторан Seafood</h2>
+          <p class="subtitle">Додаток</p>
+        </li>
 
-      <li class="card">
-        <img src="./images/Boxes.png" alt="Проєкт Boxes — додаток">
-        <h2>Проєкт Boxes</h2>
-        <p class="subtitle">Додаток</p>
-      </li>
+        <li class="card">
+          <div class="card-thumb">
+            <img src="./images/Prime.png" alt="Проєкт Prime — маркетинг">
+            <div class="card-overlay">
+              <p class="card-overlay-text">Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи приватну особу.</p>
+            </div>
+          </div>
+          <h2>Проєкт Prime</h2>
+          <p class="subtitle">Маркетинг</p>
+        </li>
 
-      <li class="card">
-        <img src="./images/ins.png" alt="Inspiration has no Borders — веб-сайт">
-        <h2>Inspiration has no Borders</h2>
-        <p class="subtitle">Веб-сайт</p>
-      </li>
+        <li class="card">
+          <div class="card-thumb">
+            <img src="./images/Boxes.png" alt="Проєкт Boxes — додаток">
+            <div class="card-overlay">
+              <p class="card-overlay-text">Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи приватнуособу.</p>
+            </div>
+          </div>
+          <h2>Проєкт Boxes</h2>
+          <p class="subtitle">Додаток</p>
+        </li>
 
-      <li class="card">
-        <img src="./images/Limited.png" alt="Limited Edition — видання, дизайн">
-        <h2>Видання Limited Edition</h2>
-        <p class="subtitle">Дизайн</p>
-      </li>
+        <li class="card">
+          <div class="card-thumb">
+            <img src="./images/ins.png" alt="Inspiration has no Borders — веб-сайт">
+            <div class="card-overlay">
+              <p class="card-overlay-text">Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи приватну особу.</p>
+            </div>
+          </div>
+          <h2>Inspiration has no Borders</h2>
+          <p class="subtitle">Веб-сайт</p>
+        </li>
 
-      <li class="card">
-        <img src="./images/LAb.png" alt="Проєкт LAB — маркетинг">
-        <h2>Проєкт LAB</h2>
-        <p class="subtitle">Маркетинг</p>
-      </li>
+        <li class="card">
+          <div class="card-thumb">
+            <img src="./images/Limited.png" alt="Limited Edition — видання, дизайн">
+            <div class="card-overlay">
+              <p class="card-overlay-text">Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи приватну особу.</p>
+            </div>
+          </div>
+          <h2>Видання Limited Edition</h2>
+          <p class="subtitle">Дизайн</p>
+        </li>
 
-      <li class="card">
-        <img src="./images/Growing.png" alt="Growing Business — додаток">
-        <h2>Growing Business</h2>
-        <p class="subtitle">Додаток</p>
-      </li>
-    </ul>
-  </main>
+        <li class="card">
+          <div class="card-thumb">
+            <img src="./images/LAb.png" alt="Проєкт LAB — маркетинг">
+            <div class="card-overlay">
+              <p class="card-overlay-text">Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи приватну особу.</p>
+            </div>
+          </div>
+          <h2>Проєкт LAB</h2>
+          <p class="subtitle">Маркетинг</p>
+        </li>
+
+        <li class="card">
+          <div class="card-thumb">
+            <img src="./images/Growing.png" alt="Growing Business — додаток">
+            <div class="card-overlay">
+              <p class="card-overlay-text">Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи приватну особу.</p>
+            </div>
+          </div>
+          <h2>Growing Business</h2>
+          <p class="subtitle">Додаток</p>
+        </li>
+
+      </ul>
+    </main>
   </section>
-    <footer class="footer" id="contacts">
-      <div class="container">
-        <a href="./index.html" class="logo">Web</a>
-        <ul class="footer-list">
-          <li class="foot-list-item"><p>м. Київ, пр-т Лесі Українки, 26</p></li>
-          <li class="foot-list-item"><p><a href="mailto:info@devstudio.com">info@devstudio.com</a></p></li>
-          <li class="foot-list-item"><p><a href="tel:+380961111111">+38 096 111 11 11</a></p></li>
-        </ul>
-      </div>
-    </footer>
+
+  <footer class="footer" id="contacts">
+    <div class="container">
+      <a href="./index.html" class="logo">Web</a>
+      <ul class="footer-list">
+        <li class="foot-list-item"><p>м. Київ, пр-т Лесі Українки, 26</p></li>
+        <li class="foot-list-item"><p><a href="mailto:info@devstudio.com">info@devstudio.com</a></p></li>
+        <li class="foot-list-item"><p><a href="tel:+380961111111">+38 096 111 11 11</a></p></li>
+      </ul>
+    </div>
+  </footer>
 </body>
 </html>
