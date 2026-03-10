@@ -1,5 +1,5 @@
 :root {
-    --button: #2196F3;  
+    --button: #2196F3;
     --header-foot-bg: #2F303A;
     --subtext: #757575;
     --command-bg: #F5F4FA;
@@ -64,6 +64,7 @@ body {
 .main-nav a {
     color: var(--command-text);
 }
+
 .main-nav a:hover {
     color: var(--button);
 }
@@ -152,6 +153,7 @@ body {
     line-height: 1.36;
     letter-spacing: 0.06em;
     color: var(--text);
+    font-family: "Roboto";
 }
 
 .hero-btn {
@@ -168,6 +170,7 @@ body {
     background-color: var(--button);
     box-shadow: 10px 2px 5px 0px rgba(0, 0, 0, 0.15);
     cursor: pointer;
+    margin-top: 30px;
 }
 
 /* FEATURES */
@@ -301,7 +304,7 @@ body {
     width: 270px;
     background: var(--text);
     border-radius: 0 0 4px 4px;
-    box-shadow: 
+    box-shadow:
         0px 1px 0px 0px rgba(0, 0, 0, 0.20),
         0px 1px 1px 0px rgba(0, 0, 0, 0.14),
         0px 1px 3px 0px rgba(0, 0, 0, 0.12);
@@ -413,15 +416,16 @@ body {
 }
 
 .footer .container {
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 15px;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: auto auto;
-    gap: 70px;
+    display: flex;
     align-items: flex-start;
+    gap: 70px;
+}
+
+/* Обгортка лого + адреса */
+.footer-address {
+    display: flex;
+    flex-direction: column;
+    min-width: 231px;
 }
 
 .footer .logo {
@@ -432,9 +436,7 @@ body {
     color: var(--button);
     text-decoration: none;
     line-height: 1;
-    margin: 0 0 9px 0;
-    grid-column: 1;
-    grid-row: 1;
+    margin-bottom: 9px;
 }
 
 .footer .logo::after {
@@ -446,8 +448,6 @@ body {
     list-style: none;
     padding: 0;
     margin: 0;
-    grid-column: 1;
-    grid-row: 2;
 }
 
 .foot-list-item {
@@ -513,19 +513,16 @@ body {
 }
 
 .social-section {
-    grid-column: 2;
-    grid-row: 1 / 3;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
 }
 
 .newsletter-section {
-    grid-column: 3;
-    grid-row: 1 / 3;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
+    flex: 1;
 }
 
 .newsletter-form {
@@ -634,7 +631,7 @@ body {
     background-color: var(--button);
     color: var(--text);
     font-weight: 500;
-    box-shadow: 
+    box-shadow:
         0px 2px 2px 0px rgba(0, 0, 0, 0.12),
         0px 1px 2px 0px rgba(0, 0, 0, 0.08),
         0px 3px 1px 0px rgba(0, 0, 0, 0.10);
@@ -659,7 +656,7 @@ body {
 }
 
 .card:hover {
-    box-shadow: 
+    box-shadow:
         0px 1px 1px 0px rgba(0, 0, 0, 0.12),
         0px 4px 4px 0px rgba(0, 0, 0, 0.06),
         1px 4px 6px 0px rgba(0, 0, 0, 0.16);
@@ -690,9 +687,7 @@ body {
     padding-bottom: 20px;
 }
 
-/* =====================================================
-   BACKDROP
-   ===================================================== */
+/* BACKDROP */
 .backdrop {
     position: fixed;
     top: 0;
@@ -701,16 +696,12 @@ body {
     height: 100%;
     background-color: rgba(0, 0, 0, 0.2);
     z-index: 999;
-
-    /* Центрування модального вікна */
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-/* =====================================================
-   MODAL
-   ===================================================== */
+/* MODAL */
 .modal {
     position: relative;
     width: 528px;
@@ -724,22 +715,18 @@ body {
         0px 1px 3px rgba(0, 0, 0, 0.12);
 }
 
-/* --- Кнопка закриття --- */
 .modal-close-btn {
     position: absolute;
     top: 8px;
     right: 8px;
-
     width: 30px;
     height: 30px;
     border-radius: 50%;
     border: 1px solid rgba(0, 0, 0, 0.1);
     background-color: #FFFFFF;
-
     display: flex;
     align-items: center;
     justify-content: center;
-
     cursor: pointer;
     color: var(--black);
     transition: color 0.3s ease, border-color 0.3s ease;
@@ -754,7 +741,6 @@ body {
     display: block;
 }
 
-/* --- Заголовок --- */
 .modal-title {
     font-weight: 700;
     font-size: 20px;
@@ -765,7 +751,6 @@ body {
     margin-bottom: 30px;
 }
 
-/* --- Поля форми --- */
 .modal-field {
     margin-bottom: 20px;
 }
@@ -779,7 +764,6 @@ body {
     margin-bottom: 4px;
 }
 
-/* Обгортка для інпута з іконкою */
 .modal-input-wrap {
     position: relative;
 }
@@ -801,7 +785,6 @@ body {
     border-color: var(--button);
 }
 
-/* При ховері/фокусі на інпуті — іконка теж синя */
 .modal-input:hover + .modal-input-icon,
 .modal-input:focus + .modal-input-icon {
     color: var(--button);
@@ -817,7 +800,6 @@ body {
     transition: color 0.3s ease;
 }
 
-/* --- Textarea --- */
 .modal-textarea {
     width: 100%;
     height: 120px;
@@ -843,7 +825,6 @@ body {
     border-color: var(--button);
 }
 
-/* --- Чекбокс --- */
 .modal-checkbox-wrap {
     margin-bottom: 30px;
 }
@@ -859,7 +840,6 @@ body {
     cursor: pointer;
 }
 
-/* Приховуємо стандартний чекбокс */
 .modal-checkbox-input {
     position: absolute;
     width: 1px;
@@ -873,7 +853,6 @@ body {
     overflow: hidden;
 }
 
-/* Кастомний чекбокс */
 .modal-checkbox-custom {
     display: inline-flex;
     align-items: center;
@@ -899,7 +878,6 @@ body {
     text-underline-offset: 2px;
 }
 
-/* --- Кнопка відправити --- */
 .modal-submit-btn {
     display: block;
     margin: 0 auto;
