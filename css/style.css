@@ -1,12 +1,31 @@
 :root {
-    --button: #2196F3;
-    --header-foot-bg: #2F303A;
-    --subtext: #757575;
-    --command-bg: #F5F4FA;
-    --text: #FFFFFF;
-    --black: #000000;
-    --command-text: #212121;
-    --container-bg: #EEEEEE;
+    /* Brand */
+    --color-accent: #2196F3;
+    --color-accent-dark: #0a7cc4;
+
+    /* Backgrounds */
+    --color-bg-dark: #2F303A;
+    --color-bg-light: #F5F4FA;
+    --color-bg-white: #FFFFFF;
+    --color-bg-card-border: #EEEEEE;
+
+    /* Text */
+    --color-text-primary: #212121;
+    --color-text-secondary: #757575;
+    --color-text-white: #FFFFFF;
+    --color-text-white-muted: rgba(255, 255, 255, 0.6);
+    --color-text-black: #000000;
+
+    /* Icons / Borders */
+    --color-icon-muted: #AFB1B8;
+    --color-border-modal: rgba(33, 33, 33, 0.2);
+    --color-border-footer-input: rgba(255, 255, 255, 0.3);
+    --color-bg-footer-input: rgba(255, 255, 255, 0.1);
+    --color-bg-footer-social: rgba(255, 255, 255, 0.1);
+    --color-overlay-services: rgba(47, 48, 58, 0.8);
+    --color-overlay-card: rgba(33, 150, 243, 0.9);
+    --color-backdrop: rgba(0, 0, 0, 0.2);
+    --color-modal-close-border: rgba(0, 0, 0, 0.1);
 }
 
 *,
@@ -32,25 +51,36 @@ body {
 }
 
 /* HEADER */
+/* 1. Gap logo→nav = 93px; nav→contacts = 313px */
 .header-inner {
     display: flex;
-    justify-content: space-between;
     align-items: center;
     padding: 25px 0;
 }
 
+.header-inner .logo {
+    margin-right: 93px;
+}
+
+.header-inner .contacts {
+    margin-left: 313px;
+}
+
+/* 6. Logo letter-spacing 3% */
 .logo {
     display: inline-block;
     font-family: "Raleway";
     font-weight: 700;
-    color: var(--button);
+    color: var(--color-accent);
     font-size: 26px;
+    letter-spacing: 0.03em;
+    text-decoration: none;
 }
 
 .logo::after {
     display: inline;
     content: "Studio";
-    color: var(--black);
+    color: var(--color-text-black);
     font-family: "Raleway";
     font-weight: 700;
 }
@@ -62,14 +92,16 @@ body {
 }
 
 .main-nav a {
-    color: var(--command-text);
+    color: var(--color-text-primary);
+    text-decoration: none;
 }
 
 .main-nav a:hover {
-    color: var(--button);
+    color: var(--color-accent);
 }
 
-.nav-item {
+/* 8. Font styles moved from .nav-item (li) to the anchor inside it */
+.nav-item a {
     font-family: "Roboto";
     font-weight: 500;
     font-size: 14px;
@@ -77,19 +109,19 @@ body {
     letter-spacing: 0.02em;
 }
 
-.nav-item a.active {
-    color: var(--button);
+.nav-item a.nav-link--active {
+    color: var(--color-accent);
     position: relative;
 }
 
-.nav-item a.active::after {
+.nav-item a.nav-link--active::after {
     content: '';
     position: absolute;
     bottom: -26px;
     left: 0;
     width: 100%;
     height: 4px;
-    background-color: var(--button);
+    background-color: var(--color-accent);
     border-radius: 2px;
 }
 
@@ -107,12 +139,17 @@ body {
 .contact-icon {
     width: 16px;
     height: 16px;
-    fill: var(--subtext);
+    fill: var(--color-text-secondary);
     transition: fill 0.3s ease;
 }
 
+/* 7. Icon reacts to hover on the whole contact-item */
+.contact-item:hover .contact-icon {
+    fill: var(--color-accent);
+}
+
 .contact-item a {
-    color: var(--subtext);
+    color: var(--color-text-secondary);
     transition: color 0.3s ease;
     text-decoration: none;
     font-weight: 500;
@@ -121,19 +158,17 @@ body {
     letter-spacing: 0.02em;
 }
 
-.contact-item:hover .contact-icon {
-    fill: var(--button);
-}
-
 .contact-item a:hover {
-    color: var(--button);
+    color: var(--color-accent);
 }
 
 /* HERO */
+/* 2. height: 600px -> padding-based */
 .hero {
     width: 100%;
     max-width: 1600px;
-    height: 600px;
+    padding-top: 200px;
+    padding-bottom: 200px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -147,30 +182,30 @@ body {
 }
 
 .hero-title {
-    width: 696px;
+    max-width: 696px;
     font-weight: 900;
     font-size: 44px;
     line-height: 1.36;
     letter-spacing: 0.06em;
-    color: var(--text);
+    color: var(--color-text-white);
     font-family: "Roboto";
 }
 
+/* 2. width/height -> padding */
 .hero-btn {
     font-weight: 700;
     font-size: 16px;
     line-height: 30px;
-    margin: 0 auto;
+    margin: 30px auto 0;
     display: block;
     border: none;
     border-radius: 4px;
-    width: 216px;
-    height: 50px;
-    color: var(--text);
-    background-color: var(--button);
+    padding: 10px 32px;
+    color: var(--color-text-white);
+    background-color: var(--color-accent);
     box-shadow: 10px 2px 5px 0px rgba(0, 0, 0, 0.15);
     cursor: pointer;
-    margin-top: 30px;
+    white-space: nowrap;
 }
 
 /* FEATURES */
@@ -190,22 +225,36 @@ body {
     flex: 1;
 }
 
+/* 3. Icon box uses ::before instead of <img> */
 .features-icon-box {
-    width: 270px;
-    height: 120px;
     max-width: 100%;
-    background-color: var(--command-bg);
+    background-color: var(--color-bg-light);
     border-radius: 4px;
     display: flex;
     align-items: center;
     justify-content: center;
+    padding: 25px 0;
     margin-bottom: 30px;
 }
 
 .features-icon-box img {
+    display: none;
+}
+
+.features-icon-box::before {
+    content: '';
+    display: block;
     width: 70px;
     height: 70px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
 }
+
+.features-item:nth-child(1) .features-icon-box::before { background-image: url(../images/antenna.svg); }
+.features-item:nth-child(2) .features-icon-box::before { background-image: url(../images/clock.svg); }
+.features-item:nth-child(3) .features-icon-box::before { background-image: url(../images/diagram.svg); }
+.features-item:nth-child(4) .features-icon-box::before { background-image: url(../images/astronaut.svg); }
 
 .features-item-title {
     font-weight: 700;
@@ -216,7 +265,7 @@ body {
 }
 
 .features-item-text {
-    color: var(--subtext);
+    color: var(--color-text-secondary);
     font-weight: 400;
     font-size: 14px;
     line-height: 24px;
@@ -240,17 +289,18 @@ body {
     margin-bottom: 50px;
 }
 
+/* 2. height: 70px -> padding */
 .services-label {
     position: absolute;
     bottom: 0;
     left: 0;
     width: 100%;
-    height: 70px;
+    padding: 27px 0;
     display: flex;
     align-items: center;
     justify-content: center;
-    background: rgba(47, 48, 58, 0.8);
-    color: #fff;
+    background: var(--color-overlay-services);
+    color: var(--color-text-white);
     font-weight: 700;
     font-size: 14px;
     letter-spacing: 0.03em;
@@ -274,7 +324,7 @@ body {
     font-family: "Roboto";
     padding-top: 94px;
     padding-bottom: 94px;
-    background-color: var(--command-bg);
+    background-color: var(--color-bg-light);
 }
 
 .team-title {
@@ -283,13 +333,14 @@ body {
     font-size: 36px;
     line-height: 100%;
     text-align: center;
+    margin-bottom: 50px;
 }
 
 .team-role {
     font-weight: 400;
     font-size: 16px;
     line-height: 100%;
-    color: var(--subtext);
+    color: var(--color-text-secondary);
     margin-top: 10px;
 }
 
@@ -299,10 +350,11 @@ body {
     gap: 30px;
 }
 
+/* 2. width: 270px -> flex: 1 */
 .team-member {
     text-align: center;
-    width: 270px;
-    background: var(--text);
+    flex: 1;
+    background: var(--color-bg-white);
     border-radius: 0 0 4px 4px;
     box-shadow:
         0px 1px 0px 0px rgba(0, 0, 0, 0.20),
@@ -314,13 +366,16 @@ body {
     font-weight: 500;
     font-size: 16px;
     line-height: 100%;
-    color: var(--command-text);
+    color: var(--color-text-primary);
     margin-top: 30px;
 }
 
+/* 2. width/height -> aspect-ratio */
 .team-image {
-    width: 270px;
-    height: 260px;
+    width: 100%;
+    aspect-ratio: 270 / 260;
+    object-fit: cover;
+    display: block;
 }
 
 .team-social {
@@ -331,22 +386,22 @@ body {
     padding-bottom: 30px;
 }
 
+/* 2. width/height: 44px -> padding */
 .team-social-link {
-    width: 44px;
-    height: 44px;
+    padding: 12px;
     border-radius: 50%;
     background-color: transparent;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #AFB1B8;
+    color: var(--color-icon-muted);
     transition: background-color 0.3s ease, color 0.3s ease;
     text-decoration: none;
 }
 
 .team-social-link:hover {
-    background-color: var(--button);
-    color: #FFFFFF;
+    background-color: var(--color-accent);
+    color: var(--color-text-white);
 }
 
 .team-social-icon {
@@ -366,7 +421,7 @@ body {
     line-height: 1.17;
     text-align: center;
     letter-spacing: 0.03em;
-    color: var(--command-text);
+    color: var(--color-text-primary);
     margin-bottom: 50px;
 }
 
@@ -385,22 +440,23 @@ body {
     min-width: 170px;
 }
 
+/* 2. height: 92px -> padding */
 .client-link {
     display: flex;
     align-items: center;
     justify-content: center;
     width: 100%;
-    height: 92px;
-    border: 1px solid #AFB1B8;
+    padding: 16px 0;
+    border: 1px solid var(--color-icon-muted);
     border-radius: 4px;
-    color: #AFB1B8;
+    color: var(--color-icon-muted);
     transition: border-color 0.3s ease, color 0.3s ease;
     text-decoration: none;
 }
 
 .client-link:hover {
-    border-color: var(--button);
-    color: var(--button);
+    border-color: var(--color-accent);
+    color: var(--color-accent);
 }
 
 .client-icon {
@@ -411,7 +467,7 @@ body {
 
 /* FOOTER */
 .footer {
-    background-color: #2F303A;
+    background-color: var(--color-bg-dark);
     padding: 60px 0;
 }
 
@@ -421,7 +477,6 @@ body {
     gap: 70px;
 }
 
-/* Обгортка лого + адреса */
 .footer-address {
     display: flex;
     flex-direction: column;
@@ -433,15 +488,16 @@ body {
     font-family: 'Raleway', sans-serif;
     font-weight: 700;
     font-size: 26px;
-    color: var(--button);
+    color: var(--color-accent);
     text-decoration: none;
     line-height: 1;
     margin-bottom: 9px;
+    letter-spacing: 0.03em;
 }
 
 .footer .logo::after {
     content: 'Studio';
-    color: #FFFFFF;
+    color: var(--color-text-white);
 }
 
 .footer-list {
@@ -450,47 +506,48 @@ body {
     margin: 0;
 }
 
-.foot-list-item {
+/* 8. Styles from .footer-address-item p moved here */
+.footer-address-item {
     margin-bottom: 9px;
-}
-
-.foot-list-item:last-child {
-    margin-bottom: 0;
-}
-
-.foot-list-item p {
-    margin: 0;
     font-size: 14px;
     line-height: 1.71;
     letter-spacing: 0.03em;
-    color: #FFFFFF;
+    color: var(--color-text-white);
 }
 
-.foot-list-item a {
-    color: rgba(255, 255, 255, 0.6);
+.footer-address-item:last-child {
+    margin-bottom: 0;
+}
+
+.footer-address-item a {
+    color: var(--color-text-white-muted);
     text-decoration: none;
     transition: color 0.3s ease;
 }
 
-.join-text {
+.footer-section-title {
     font-weight: 700;
     font-size: 14px;
     text-transform: uppercase;
-    color: var(--text);
+    color: var(--color-text-white);
     margin: 0 0 20px 0;
     letter-spacing: 0.03em;
 }
 
-.social-footer {
+/* 4. footer social: divs -> ul/li in HTML */
+.footer-social-list {
     display: flex;
     gap: 10px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
 }
 
-.social-icons-style {
-    width: 44px;
-    height: 44px;
+/* 2. width/height: 44px -> padding */
+.footer-social-icon-btn {
+    padding: 12px;
     border-radius: 50%;
-    background-color: rgba(255, 255, 255, 0.1);
+    background-color: var(--color-bg-footer-social);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -498,18 +555,18 @@ body {
     transition: background-color 0.3s ease;
 }
 
-.social-icons-style:hover {
-    background-color: var(--button);
+.footer-social-icon-btn:hover {
+    background-color: var(--color-accent);
 }
 
-.svg-style-icons {
+.footer-social-icon {
     width: 20px;
     height: 20px;
-    color: #FFFFFF;
+    color: var(--color-text-white);
 }
 
-.svg-style-icons use {
-    fill: #FFFFFF;
+.footer-social-icon use {
+    fill: var(--color-text-white);
 }
 
 .social-section {
@@ -531,34 +588,34 @@ body {
     width: 100%;
 }
 
+/* 2. height: 50px -> padding */
 .newsletter-input {
     flex: 1;
     min-width: 0;
-    height: 50px;
     padding: 15px 16px;
-    border: 1px solid rgba(255, 255, 255, 0.3);
+    border: 1px solid var(--color-border-footer-input);
     border-radius: 4px;
-    background-color: rgba(255, 255, 255, 0.1);
-    color: var(--text);
+    background-color: var(--color-bg-footer-input);
+    color: var(--color-text-white);
     font-size: 14px;
     outline: none;
     transition: border-color 0.3s ease;
 }
 
 .newsletter-input::placeholder {
-    color: rgba(255, 255, 255, 0.6);
+    color: var(--color-text-white-muted);
 }
 
 .newsletter-input:focus {
-    border-color: var(--button);
+    border-color: var(--color-accent);
 }
 
+/* 2. height: 50px -> padding */
 .newsletter-btn {
     min-width: 200px;
-    height: 50px;
-    padding: 10px 28px;
-    background-color: var(--button);
-    color: var(--text);
+    padding: 15px 28px;
+    background-color: var(--color-accent);
+    color: var(--color-text-white);
     border: none;
     border-radius: 4px;
     font-weight: 700;
@@ -569,7 +626,7 @@ body {
 }
 
 .newsletter-btn:hover {
-    background-color: #0a7cc4;
+    background-color: var(--color-accent-dark);
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
 }
 
@@ -589,7 +646,7 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(33, 150, 243, 0.9);
+    background-color: var(--color-overlay-card);
     padding: 63px 24px;
     transform: translateY(100%);
     transition: transform 0.3s ease;
@@ -599,7 +656,7 @@ body {
     font-size: 18px;
     line-height: 1.56;
     letter-spacing: 0.03em;
-    color: #FFFFFF;
+    color: var(--color-text-white);
 }
 
 .card:hover .card-overlay {
@@ -611,6 +668,9 @@ body {
     justify-content: center;
     gap: 8px;
     padding-bottom: 50px;
+    list-style: none;
+    margin: 0;
+    padding-left: 0;
 }
 
 .btn-item button {
@@ -620,16 +680,16 @@ body {
     line-height: 1.62;
     letter-spacing: 0.03em;
     padding: 6px 22px;
-    background-color: var(--command-bg);
-    color: var(--command-text);
+    background-color: var(--color-bg-light);
+    color: var(--color-text-primary);
     border: none;
     border-radius: 4px;
     cursor: pointer;
 }
 
 .btn-item button:hover {
-    background-color: var(--button);
-    color: var(--text);
+    background-color: var(--color-accent);
+    color: var(--color-text-white);
     font-weight: 500;
     box-shadow:
         0px 2px 2px 0px rgba(0, 0, 0, 0.12),
@@ -649,7 +709,7 @@ body {
 
 .card {
     width: 370px;
-    border: 1px solid var(--container-bg);
+    border: 1px solid var(--color-bg-card-border);
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
@@ -672,15 +732,15 @@ body {
     font-size: 18px;
     line-height: 2;
     letter-spacing: 0.06em;
-    color: var(--command-text);
+    color: var(--color-text-primary);
     margin: 20px 0 4px 24px;
 }
 
-.card .subtitle {
+.card .card-subtitle {
     font-size: 16px;
     line-height: 1.87;
     letter-spacing: 0.03em;
-    color: var(--subtext);
+    color: var(--color-text-secondary);
     margin: 0;
     padding-left: 24px;
     margin-top: auto;
@@ -694,7 +754,7 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.2);
+    background-color: var(--color-backdrop);
     z-index: 999;
     display: flex;
     align-items: center;
@@ -706,7 +766,7 @@ body {
     position: relative;
     width: 528px;
     min-height: 581px;
-    background-color: #FFFFFF;
+    background-color: var(--color-bg-white);
     border-radius: 4px;
     padding: 40px;
     box-shadow:
@@ -715,26 +775,26 @@ body {
         0px 1px 3px rgba(0, 0, 0, 0.12);
 }
 
+/* 2. width/height: 30px -> padding */
 .modal-close-btn {
     position: absolute;
     top: 8px;
     right: 8px;
-    width: 30px;
-    height: 30px;
+    padding: 6px;
     border-radius: 50%;
-    border: 1px solid rgba(0, 0, 0, 0.1);
-    background-color: #FFFFFF;
+    border: 1px solid var(--color-modal-close-border);
+    background-color: var(--color-bg-white);
     display: flex;
     align-items: center;
     justify-content: center;
     cursor: pointer;
-    color: var(--black);
+    color: var(--color-text-black);
     transition: color 0.3s ease, border-color 0.3s ease;
 }
 
 .modal-close-btn:hover {
-    color: var(--button);
-    border-color: var(--button);
+    color: var(--color-accent);
+    border-color: var(--color-accent);
 }
 
 .modal-close-icon {
@@ -747,7 +807,7 @@ body {
     line-height: 1.15;
     text-align: center;
     letter-spacing: 0.03em;
-    color: var(--command-text);
+    color: var(--color-text-primary);
     margin-bottom: 30px;
 }
 
@@ -760,7 +820,7 @@ body {
     font-size: 12px;
     line-height: 1.17;
     letter-spacing: 0.01em;
-    color: var(--subtext);
+    color: var(--color-text-secondary);
     margin-bottom: 4px;
 }
 
@@ -768,26 +828,26 @@ body {
     position: relative;
 }
 
+/* 2. height: 40px -> padding */
 .modal-input {
     width: 100%;
-    height: 40px;
     padding: 11px 12px 11px 42px;
-    border: 1px solid rgba(33, 33, 33, 0.2);
+    border: 1px solid var(--color-border-modal);
     border-radius: 4px;
     outline: none;
     font-size: 14px;
-    color: var(--command-text);
+    color: var(--color-text-primary);
     transition: border-color 0.3s ease;
 }
 
 .modal-input:hover,
 .modal-input:focus {
-    border-color: var(--button);
+    border-color: var(--color-accent);
 }
 
 .modal-input:hover + .modal-input-icon,
 .modal-input:focus + .modal-input-icon {
-    color: var(--button);
+    color: var(--color-accent);
 }
 
 .modal-input-icon {
@@ -795,16 +855,17 @@ body {
     left: 12px;
     top: 50%;
     transform: translateY(-50%);
-    color: var(--command-text);
+    color: var(--color-text-primary);
     pointer-events: none;
     transition: color 0.3s ease;
 }
 
+/* 2. height: 120px -> min-height + padding */
 .modal-textarea {
     width: 100%;
-    height: 120px;
+    min-height: 120px;
     padding: 12px 16px;
-    border: 1px solid rgba(33, 33, 33, 0.2);
+    border: 1px solid var(--color-border-modal);
     border-radius: 4px;
     outline: none;
     resize: none;
@@ -812,7 +873,7 @@ body {
     font-size: 12px;
     line-height: 1.17;
     letter-spacing: 0.01em;
-    color: var(--command-text);
+    color: var(--color-text-primary);
     transition: border-color 0.3s ease;
 }
 
@@ -822,7 +883,7 @@ body {
 
 .modal-textarea:hover,
 .modal-textarea:focus {
-    border-color: var(--button);
+    border-color: var(--color-accent);
 }
 
 .modal-checkbox-wrap {
@@ -836,7 +897,7 @@ body {
     font-size: 14px;
     line-height: 1.71;
     letter-spacing: 0.03em;
-    color: var(--subtext);
+    color: var(--color-text-secondary);
     cursor: pointer;
 }
 
@@ -853,38 +914,40 @@ body {
     overflow: hidden;
 }
 
+/* 2. width/height -> padding */
 .modal-checkbox-custom {
     display: inline-flex;
     align-items: center;
     justify-content: center;
     flex-shrink: 0;
-    width: 16px;
-    height: 15px;
-    border: 2px solid var(--command-text);
+    padding: 2px 1px;
+    min-width: 16px;
+    min-height: 15px;
+    border: 2px solid var(--color-text-primary);
     border-radius: 2px;
     transition: background-color 0.3s ease, border-color 0.3s ease;
 }
 
 .modal-checkbox-input:checked + .modal-checkbox-custom {
-    background-color: var(--button);
-    border-color: var(--button);
+    background-color: var(--color-accent);
+    border-color: var(--color-accent);
     background-image: url("data:image/svg+xml,%3Csvg width='11' height='8' viewBox='0 0 11 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 4L4 7L10 1' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
     background-repeat: no-repeat;
     background-position: center;
 }
 
 .modal-policy-link {
-    color: var(--button);
+    color: var(--color-accent);
     text-underline-offset: 2px;
 }
 
+/* 2. width/height -> padding */
 .modal-submit-btn {
     display: block;
     margin: 0 auto;
-    width: 200px;
-    height: 50px;
-    background-color: var(--button);
-    color: var(--text);
+    padding: 10px 52px;
+    background-color: var(--color-accent);
+    color: var(--color-text-white);
     font-weight: 700;
     font-size: 16px;
     line-height: 1.87;
@@ -897,7 +960,7 @@ body {
 }
 
 .modal-submit-btn:hover {
-    background-color: #0a7cc4;
+    background-color: var(--color-accent-dark);
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25);
 }
 
