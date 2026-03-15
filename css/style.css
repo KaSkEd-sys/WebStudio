@@ -166,7 +166,6 @@ body {
 /* 2. height: 600px -> padding-based */
 .hero {
     width: 100%;
-    max-width: 1600px;
     padding-top: 200px;
     padding-bottom: 200px;
     display: flex;
