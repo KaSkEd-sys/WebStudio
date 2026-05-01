@@ -1,22 +1,22 @@
 :root {
-    /* Brand */
+    
     --color-accent: #2196F3;
     --color-accent-dark: #0a7cc4;
 
-    /* Backgrounds */
+    
     --color-bg-dark: #2F303A;
     --color-bg-light: #F5F4FA;
     --color-bg-white: #FFFFFF;
     --color-bg-card-border: #EEEEEE;
 
-    /* Text */
+    
     --color-text-primary: #212121;
     --color-text-secondary: #757575;
     --color-text-white: #FFFFFF;
     --color-text-white-muted: rgba(255, 255, 255, 0.6);
     --color-text-black: #000000;
 
-    /* Icons / Borders */
+    
     --color-icon-muted: #AFB1B8;
     --color-border-modal: rgba(33, 33, 33, 0.2);
     --color-border-footer-input: rgba(255, 255, 255, 0.3);
@@ -26,6 +26,10 @@
     --color-overlay-card: rgba(33, 150, 243, 0.9);
     --color-backdrop: rgba(0, 0, 0, 0.2);
     --color-modal-close-border: rgba(0, 0, 0, 0.1);
+
+    
+    --transition-duration: 250ms;
+    --transition-timing: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 *,
@@ -50,8 +54,7 @@ body {
     padding-right: 15px;
 }
 
-/* HEADER */
-/* 1. Gap logo→nav = 93px; nav→contacts = 313px */
+
 .header-inner {
     display: flex;
     align-items: center;
@@ -66,7 +69,6 @@ body {
     margin-left: 313px;
 }
 
-/* 6. Logo letter-spacing 3% */
 .logo {
     display: inline-block;
     font-family: "Raleway";
@@ -75,6 +77,7 @@ body {
     font-size: 26px;
     letter-spacing: 0.03em;
     text-decoration: none;
+    transition: color var(--transition-duration) var(--transition-timing);
 }
 
 .logo::after {
@@ -83,6 +86,7 @@ body {
     color: var(--color-text-black);
     font-family: "Raleway";
     font-weight: 700;
+    transition: color var(--transition-duration) var(--transition-timing);
 }
 
 .nav-list {
@@ -94,13 +98,14 @@ body {
 .main-nav a {
     color: var(--color-text-primary);
     text-decoration: none;
+    transition: color var(--transition-duration) var(--transition-timing);
 }
 
-.main-nav a:hover {
+.main-nav a:hover,
+.main-nav a:focus {
     color: var(--color-accent);
 }
 
-/* 8. Font styles moved from .nav-item (li) to the anchor inside it */
 .nav-item a {
     font-family: "Roboto";
     font-weight: 500;
@@ -140,30 +145,30 @@ body {
     width: 16px;
     height: 16px;
     fill: var(--color-text-secondary);
-    transition: fill 0.3s ease;
+    transition: fill var(--transition-duration) var(--transition-timing);
 }
 
-/* 7. Icon reacts to hover on the whole contact-item */
-.contact-item:hover .contact-icon {
+.contact-item:hover .contact-icon,
+.contact-item:focus-within .contact-icon {
     fill: var(--color-accent);
 }
 
 .contact-item a {
     color: var(--color-text-secondary);
-    transition: color 0.3s ease;
     text-decoration: none;
     font-weight: 500;
     font-size: 14px;
     line-height: 1.14;
     letter-spacing: 0.02em;
+    transition: color var(--transition-duration) var(--transition-timing);
 }
 
-.contact-item a:hover {
+.contact-item a:hover,
+.contact-item a:focus {
     color: var(--color-accent);
 }
 
-/* HERO */
-/* 2. height: 600px -> padding-based */
+
 .hero {
     width: 100%;
     padding-top: 200px;
@@ -190,7 +195,6 @@ body {
     font-family: "Roboto";
 }
 
-/* 2. width/height -> padding */
 .hero-btn {
     font-weight: 700;
     font-size: 16px;
@@ -205,9 +209,17 @@ body {
     box-shadow: 10px 2px 5px 0px rgba(0, 0, 0, 0.15);
     cursor: pointer;
     white-space: nowrap;
+    transition: background-color var(--transition-duration) var(--transition-timing),
+                box-shadow var(--transition-duration) var(--transition-timing);
 }
 
-/* FEATURES */
+.hero-btn:hover,
+.hero-btn:focus {
+    background-color: var(--color-accent-dark);
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25);
+}
+
+
 .features {
     font-family: "Roboto";
     padding-top: 94px;
@@ -224,7 +236,6 @@ body {
     flex: 1;
 }
 
-/* 3. Icon box uses ::before instead of <img> */
 .features-icon-box {
     max-width: 100%;
     background-color: var(--color-bg-light);
@@ -271,7 +282,7 @@ body {
     letter-spacing: 0.03em;
 }
 
-/* SERVICES */
+
 .services {
     padding-bottom: 94px;
 }
@@ -288,7 +299,6 @@ body {
     margin-bottom: 50px;
 }
 
-/* 2. height: 70px -> padding */
 .services-label {
     position: absolute;
     bottom: 0;
@@ -317,7 +327,7 @@ body {
     overflow: hidden;
 }
 
-/* TEAM */
+
 .team {
     display: block;
     font-family: "Roboto";
@@ -349,7 +359,6 @@ body {
     gap: 30px;
 }
 
-/* 2. width: 270px -> flex: 1 */
 .team-member {
     text-align: center;
     flex: 1;
@@ -369,7 +378,6 @@ body {
     margin-top: 30px;
 }
 
-/* 2. width/height -> aspect-ratio */
 .team-image {
     width: 100%;
     aspect-ratio: 270 / 260;
@@ -385,7 +393,6 @@ body {
     padding-bottom: 30px;
 }
 
-/* 2. width/height: 44px -> padding */
 .team-social-link {
     padding: 12px;
     border-radius: 50%;
@@ -394,11 +401,13 @@ body {
     align-items: center;
     justify-content: center;
     color: var(--color-icon-muted);
-    transition: background-color 0.3s ease, color 0.3s ease;
     text-decoration: none;
+    transition: background-color var(--transition-duration) var(--transition-timing),
+                color var(--transition-duration) var(--transition-timing);
 }
 
-.team-social-link:hover {
+.team-social-link:hover,
+.team-social-link:focus {
     background-color: var(--color-accent);
     color: var(--color-text-white);
 }
@@ -409,7 +418,7 @@ body {
     fill: currentColor;
 }
 
-/* CLIENTS */
+
 .clients {
     padding: 94px 0;
 }
@@ -439,7 +448,6 @@ body {
     min-width: 170px;
 }
 
-/* 2. height: 92px -> padding */
 .client-link {
     display: flex;
     align-items: center;
@@ -449,11 +457,13 @@ body {
     border: 1px solid var(--color-icon-muted);
     border-radius: 4px;
     color: var(--color-icon-muted);
-    transition: border-color 0.3s ease, color 0.3s ease;
     text-decoration: none;
+    transition: border-color var(--transition-duration) var(--transition-timing),
+                color var(--transition-duration) var(--transition-timing);
 }
 
-.client-link:hover {
+.client-link:hover,
+.client-link:focus {
     border-color: var(--color-accent);
     color: var(--color-accent);
 }
@@ -464,7 +474,7 @@ body {
     fill: currentColor;
 }
 
-/* FOOTER */
+
 .footer {
     background-color: var(--color-bg-dark);
     padding: 60px 0;
@@ -505,7 +515,6 @@ body {
     margin: 0;
 }
 
-/* 8. Styles from .footer-address-item p moved here */
 .footer-address-item {
     margin-bottom: 9px;
     font-size: 14px;
@@ -521,7 +530,12 @@ body {
 .footer-address-item a {
     color: var(--color-text-white-muted);
     text-decoration: none;
-    transition: color 0.3s ease;
+    transition: color var(--transition-duration) var(--transition-timing);
+}
+
+.footer-address-item a:hover,
+.footer-address-item a:focus {
+    color: var(--color-text-white);
 }
 
 .footer-section-title {
@@ -533,7 +547,6 @@ body {
     letter-spacing: 0.03em;
 }
 
-/* 4. footer social: divs -> ul/li in HTML */
 .footer-social-list {
     display: flex;
     gap: 10px;
@@ -542,7 +555,6 @@ body {
     margin: 0;
 }
 
-/* 2. width/height: 44px -> padding */
 .footer-social-icon-btn {
     padding: 12px;
     border-radius: 50%;
@@ -551,10 +563,11 @@ body {
     align-items: center;
     justify-content: center;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: background-color var(--transition-duration) var(--transition-timing);
 }
 
-.footer-social-icon-btn:hover {
+.footer-social-icon-btn:hover,
+.footer-social-icon-btn:focus {
     background-color: var(--color-accent);
 }
 
@@ -587,7 +600,6 @@ body {
     width: 100%;
 }
 
-/* 2. height: 50px -> padding */
 .newsletter-input {
     flex: 1;
     min-width: 0;
@@ -598,7 +610,7 @@ body {
     color: var(--color-text-white);
     font-size: 14px;
     outline: none;
-    transition: border-color 0.3s ease;
+    transition: border-color var(--transition-duration) var(--transition-timing);
 }
 
 .newsletter-input::placeholder {
@@ -609,7 +621,6 @@ body {
     border-color: var(--color-accent);
 }
 
-/* 2. height: 50px -> padding */
 .newsletter-btn {
     min-width: 200px;
     padding: 15px 28px;
@@ -620,16 +631,17 @@ body {
     font-weight: 700;
     font-size: 14px;
     cursor: pointer;
-    transition: background-color 0.3s ease, box-shadow 0.3s ease;
     white-space: nowrap;
+    transition: background-color var(--transition-duration) var(--transition-timing),
+                box-shadow var(--transition-duration) var(--transition-timing);
 }
 
-.newsletter-btn:hover {
+.newsletter-btn:hover,
+.newsletter-btn:focus {
     background-color: var(--color-accent-dark);
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
 }
 
-/* PORTFOLIO PAGE */
 .portfolio {
     padding-top: 94px;
 }
@@ -648,7 +660,7 @@ body {
     background-color: var(--color-overlay-card);
     padding: 63px 24px;
     transform: translateY(100%);
-    transition: transform 0.3s ease;
+    transition: transform var(--transition-duration) var(--transition-timing);
 }
 
 .card-overlay-text {
@@ -658,7 +670,8 @@ body {
     color: var(--color-text-white);
 }
 
-.card:hover .card-overlay {
+.card:hover .card-overlay,
+.card:focus-within .card-overlay {
     transform: translateY(0);
 }
 
@@ -684,9 +697,13 @@ body {
     border: none;
     border-radius: 4px;
     cursor: pointer;
+    transition: background-color var(--transition-duration) var(--transition-timing),
+                color var(--transition-duration) var(--transition-timing),
+                box-shadow var(--transition-duration) var(--transition-timing);
 }
 
-.btn-item button:hover {
+.btn-item button:hover,
+.btn-item button:focus {
     background-color: var(--color-accent);
     color: var(--color-text-white);
     font-weight: 500;
@@ -712,9 +729,11 @@ body {
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
+    transition: box-shadow var(--transition-duration) var(--transition-timing);
 }
 
-.card:hover {
+.card:hover,
+.card:focus-within {
     box-shadow:
         0px 1px 1px 0px rgba(0, 0, 0, 0.12),
         0px 4px 4px 0px rgba(0, 0, 0, 0.06),
@@ -746,7 +765,7 @@ body {
     padding-bottom: 20px;
 }
 
-/* BACKDROP */
+
 .backdrop {
     position: fixed;
     top: 0;
@@ -758,9 +777,11 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    transition: opacity var(--transition-duration) var(--transition-timing),
+                visibility var(--transition-duration) var(--transition-timing);
 }
 
-/* MODAL */
+
 .modal {
     position: relative;
     width: 528px;
@@ -774,7 +795,6 @@ body {
         0px 1px 3px rgba(0, 0, 0, 0.12);
 }
 
-/* 2. width/height: 30px -> padding */
 .modal-close-btn {
     position: absolute;
     top: 8px;
@@ -788,10 +808,12 @@ body {
     justify-content: center;
     cursor: pointer;
     color: var(--color-text-black);
-    transition: color 0.3s ease, border-color 0.3s ease;
+    transition: color var(--transition-duration) var(--transition-timing),
+                border-color var(--transition-duration) var(--transition-timing);
 }
 
-.modal-close-btn:hover {
+.modal-close-btn:hover,
+.modal-close-btn:focus {
     color: var(--color-accent);
     border-color: var(--color-accent);
 }
@@ -827,7 +849,6 @@ body {
     position: relative;
 }
 
-/* 2. height: 40px -> padding */
 .modal-input {
     width: 100%;
     padding: 11px 12px 11px 42px;
@@ -836,17 +857,12 @@ body {
     outline: none;
     font-size: 14px;
     color: var(--color-text-primary);
-    transition: border-color 0.3s ease;
+    transition: border-color var(--transition-duration) var(--transition-timing);
 }
 
 .modal-input:hover,
 .modal-input:focus {
     border-color: var(--color-accent);
-}
-
-.modal-input:hover + .modal-input-icon,
-.modal-input:focus + .modal-input-icon {
-    color: var(--color-accent);
 }
 
 .modal-input-icon {
@@ -856,10 +872,14 @@ body {
     transform: translateY(-50%);
     color: var(--color-text-primary);
     pointer-events: none;
-    transition: color 0.3s ease;
+    transition: color var(--transition-duration) var(--transition-timing);
 }
 
-/* 2. height: 120px -> min-height + padding */
+.modal-input:hover + .modal-input-icon,
+.modal-input:focus + .modal-input-icon {
+    color: var(--color-accent);
+}
+
 .modal-textarea {
     width: 100%;
     min-height: 120px;
@@ -873,7 +893,7 @@ body {
     line-height: 1.17;
     letter-spacing: 0.01em;
     color: var(--color-text-primary);
-    transition: border-color 0.3s ease;
+    transition: border-color var(--transition-duration) var(--transition-timing);
 }
 
 .modal-textarea::placeholder {
@@ -913,7 +933,6 @@ body {
     overflow: hidden;
 }
 
-/* 2. width/height -> padding */
 .modal-checkbox-custom {
     display: inline-flex;
     align-items: center;
@@ -924,7 +943,8 @@ body {
     min-height: 15px;
     border: 2px solid var(--color-text-primary);
     border-radius: 2px;
-    transition: background-color 0.3s ease, border-color 0.3s ease;
+    transition: background-color var(--transition-duration) var(--transition-timing),
+                border-color var(--transition-duration) var(--transition-timing);
 }
 
 .modal-checkbox-input:checked + .modal-checkbox-custom {
@@ -938,9 +958,14 @@ body {
 .modal-policy-link {
     color: var(--color-accent);
     text-underline-offset: 2px;
+    transition: color var(--transition-duration) var(--transition-timing);
 }
 
-/* 2. width/height -> padding */
+.modal-policy-link:hover,
+.modal-policy-link:focus {
+    color: var(--color-accent-dark);
+}
+
 .modal-submit-btn {
     display: block;
     margin: 0 auto;
@@ -955,10 +980,12 @@ body {
     border-radius: 4px;
     cursor: pointer;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    transition: background-color var(--transition-duration) var(--transition-timing),
+                box-shadow var(--transition-duration) var(--transition-timing);
 }
 
-.modal-submit-btn:hover {
+.modal-submit-btn:hover,
+.modal-submit-btn:focus {
     background-color: var(--color-accent-dark);
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25);
 }
