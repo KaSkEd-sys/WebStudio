@@ -28,7 +28,6 @@
           <ul class="nav-list">
             <li class="nav-item"><a href="index.html">Студія</a></li>
             <li class="nav-item">
-              <!-- FIX #1: changed class from "active" to "nav-link--active" to match CSS -->
               <a href="./portfolio.html" class="nav-link--active">Портфоліо</a>
             </li>
             <li class="nav-item"><a href="#">Контакти</a></li>
@@ -37,7 +36,6 @@
 
         <div class="contacts" aria-label="Контакти">
           <ul class="contact-list">
-            <!-- FIX #7: added SVG icons to header contacts (consistent with index.html) -->
             <li class="contact-item">
               <a href="mailto:info@devstudio.com">
                 <svg class="contact-icon">
@@ -60,171 +58,154 @@
     </header>
 
     <section class="portfolio">
-      <ul class="btn-list" role="tablist" aria-label="Фільтр робіт">
-        <li class="btn-item"><button type="button">Усі</button></li>
-        <li class="btn-item"><button type="button">Веб-Сайти</button></li>
-        <li class="btn-item"><button type="button">Додатки</button></li>
-        <li class="btn-item"><button type="button">Дизайн</button></li>
-        <li class="btn-item"><button type="button">Маркетинг</button></li>
-      </ul>
-
-      <main class="main" id="main-content">
-        <ul class="main-list">
-          <li class="card">
-            <div class="card-thumb">
-              <img
-                src="./images/TechnoCrack.png"
-                alt="TechnoCrack — превью сайту"
-              />
-              <div class="card-overlay">
-                <p class="card-overlay-text">
-                  Ресурс пропонує комплексні пропозиції з різним рівнем
-                  функціоналу та сервісів. Все це дозволить відвідувачу отримати
-                  вичерпні відомості про компанію чи приватну особу.
-                </p>
-              </div>
-            </div>
-            <h2>ТехноКряк</h2>
-            <!-- FIX #4: changed class from "subtitle" to "card-subtitle" to match CSS -->
-            <p class="card-subtitle">Веб-сайт</p>
-          </li>
-
-          <li class="card">
-            <div class="card-thumb">
-              <img
-                src="./images/Poster.png"
-                alt="Постер New Orlean vs Golden Star"
-              />
-              <div class="card-overlay">
-                <p class="card-overlay-text">
-                  Ресурс пропонує комплексні пропозиції з різним рівнем
-                  функціоналу та сервісів. Все це дозволить відвідувачу отримати
-                  вичерпні відомості про компанію чи приватну особу.
-                </p>
-              </div>
-            </div>
-            <h2>Постер New Orlean vs Golden Star</h2>
-            <p class="card-subtitle">Дизайн</p>
-          </li>
-
-          <li class="card">
-            <div class="card-thumb">
-              <img
-                src="./images/Rest.png"
-                alt="Ресторан Seafood — мобільний додаток"
-              />
-              <div class="card-overlay">
-                <p class="card-overlay-text">
-                  Ресурс пропонує комплексні пропозиції з різним рівнем
-                  функціоналу та сервісів. Все це дозволить відвідувачу отримати
-                  вичерпні відомості про компанію чи приватну особу.
-                </p>
-              </div>
-            </div>
-            <h2>Ресторан Seafood</h2>
-            <p class="card-subtitle">Додаток</p>
-          </li>
-
-          <li class="card">
-            <div class="card-thumb">
-              <img src="./images/Prime.png" alt="Проєкт Prime — маркетинг" />
-              <div class="card-overlay">
-                <p class="card-overlay-text">
-                  Ресурс пропонує комплексні пропозиції з різним рівнем
-                  функціоналу та сервісів. Все це дозволить відвідувачу отримати
-                  вичерпні відомості про компанію чи приватну особу.
-                </p>
-              </div>
-            </div>
-            <h2>Проєкт Prime</h2>
-            <p class="card-subtitle">Маркетинг</p>
-          </li>
-
-          <li class="card">
-            <div class="card-thumb">
-              <img src="./images/Boxes.png" alt="Проєкт Boxes — додаток" />
-              <div class="card-overlay">
-                <p class="card-overlay-text">
-                  Ресурс пропонує комплексні пропозиції з різним рівнем
-                  функціоналу та сервісів. Все це дозволить відвідувачу отримати
-                  вичерпні відомості про компанію чи приватну особу.
-                </p>
-              </div>
-            </div>
-            <h2>Проєкт Boxes</h2>
-            <p class="card-subtitle">Додаток</p>
-          </li>
-
-          <li class="card">
-            <div class="card-thumb">
-              <img
-                src="./images/ins.png"
-                alt="Inspiration has no Borders — веб-сайт"
-              />
-              <div class="card-overlay">
-                <p class="card-overlay-text">
-                  Ресурс пропонує комплексні пропозиції з різним рівнем
-                  функціоналу та сервісів. Все це дозволить відвідувачу отримати
-                  вичерпні відомості про компанію чи приватну особу.
-                </p>
-              </div>
-            </div>
-            <h2>Inspiration has no Borders</h2>
-            <p class="card-subtitle">Веб-сайт</p>
-          </li>
-
-          <li class="card">
-            <div class="card-thumb">
-              <img
-                src="./images/Limited.png"
-                alt="Limited Edition — видання, дизайн"
-              />
-              <div class="card-overlay">
-                <p class="card-overlay-text">
-                  Ресурс пропонує комплексні пропозиції з різним рівнем
-                  функціоналу та сервісів. Все це дозволить відвідувачу отримати
-                  вичерпні відомості про компанію чи приватну особу.
-                </p>
-              </div>
-            </div>
-            <h2>Видання Limited Edition</h2>
-            <p class="card-subtitle">Дизайн</p>
-          </li>
-
-          <li class="card">
-            <div class="card-thumb">
-              <img src="./images/LAb.png" alt="Проєкт LAB — маркетинг" />
-              <div class="card-overlay">
-                <p class="card-overlay-text">
-                  Ресурс пропонує комплексні пропозиції з різним рівнем
-                  функціоналу та сервісів. Все це дозволить відвідувачу отримати
-                  вичерпні відомості про компанію чи приватну особу.
-                </p>
-              </div>
-            </div>
-            <h2>Проєкт LAB</h2>
-            <p class="card-subtitle">Маркетинг</p>
-          </li>
-
-          <li class="card">
-            <div class="card-thumb">
-              <img
-                src="./images/Growing.png"
-                alt="Growing Business — додаток"
-              />
-              <div class="card-overlay">
-                <p class="card-overlay-text">
-                  Ресурс пропонує комплексні пропозиції з різним рівнем
-                  функціоналу та сервісів. Все це дозволить відвідувачу отримати
-                  вичерпні відомості про компанію чи приватну особу.
-                </p>
-              </div>
-            </div>
-            <h2>Growing Business</h2>
-            <p class="card-subtitle">Додаток</p>
-          </li>
+      <div class="container">
+        <ul class="btn-list" role="tablist" aria-label="Фільтр робіт">
+          <li class="btn-item"><button type="button">Усі</button></li>
+          <li class="btn-item"><button type="button">Веб-Сайти</button></li>
+          <li class="btn-item"><button type="button">Додатки</button></li>
+          <li class="btn-item"><button type="button">Дизайн</button></li>
+          <li class="btn-item"><button type="button">Маркетинг</button></li>
         </ul>
-      </main>
+
+        <main class="main" id="main-content">
+          <ul class="main-list">
+            <li class="card">
+              <div class="card-thumb">
+                <img src="./images/TechnoCrack.png" alt="TechnoCrack — превью сайту" />
+                <div class="card-overlay">
+                  <p class="card-overlay-text">
+                    Ресурс пропонує комплексні пропозиції з різним рівнем
+                    функціоналу та сервісів. Все це дозволить відвідувачу отримати
+                    вичерпні відомості про компанію чи приватну особу.
+                  </p>
+                </div>
+              </div>
+              <h2>ТехноКряк</h2>
+              <p class="card-subtitle">Веб-сайт</p>
+            </li>
+
+            <li class="card">
+              <div class="card-thumb">
+                <img src="./images/Poster.png" alt="Постер New Orlean vs Golden Star" />
+                <div class="card-overlay">
+                  <p class="card-overlay-text">
+                    Ресурс пропонує комплексні пропозиції з різним рівнем
+                    функціоналу та сервісів. Все це дозволить відвідувачу отримати
+                    вичерпні відомості про компанію чи приватну особу.
+                  </p>
+                </div>
+              </div>
+              <h2>Постер New Orlean vs Golden Star</h2>
+              <p class="card-subtitle">Дизайн</p>
+            </li>
+
+            <li class="card">
+              <div class="card-thumb">
+                <img src="./images/Rest.png" alt="Ресторан Seafood — мобільний додаток" />
+                <div class="card-overlay">
+                  <p class="card-overlay-text">
+                    Ресурс пропонує комплексні пропозиції з різним рівнем
+                    функціоналу та сервісів. Все це дозволить відвідувачу отримати
+                    вичерпні відомості про компанію чи приватну особу.
+                  </p>
+                </div>
+              </div>
+              <h2>Ресторан Seafood</h2>
+              <p class="card-subtitle">Додаток</p>
+            </li>
+
+            <li class="card">
+              <div class="card-thumb">
+                <img src="./images/Prime.png" alt="Проєкт Prime — маркетинг" />
+                <div class="card-overlay">
+                  <p class="card-overlay-text">
+                    Ресурс пропонує комплексні пропозиції з різним рівнем
+                    функціоналу та сервісів. Все це дозволить відвідувачу отримати
+                    вичерпні відомості про компанію чи приватну особу.
+                  </p>
+                </div>
+              </div>
+              <h2>Проєкт Prime</h2>
+              <p class="card-subtitle">Маркетинг</p>
+            </li>
+
+            <li class="card">
+              <div class="card-thumb">
+                <img src="./images/Boxes.png" alt="Проєкт Boxes — додаток" />
+                <div class="card-overlay">
+                  <p class="card-overlay-text">
+                    Ресурс пропонує комплексні пропозиції з різним рівнем
+                    функціоналу та сервісів. Все це дозволить відвідувачу отримати
+                    вичерпні відомості про компанію чи приватну особу.
+                  </p>
+                </div>
+              </div>
+              <h2>Проєкт Boxes</h2>
+              <p class="card-subtitle">Додаток</p>
+            </li>
+
+            <li class="card">
+              <div class="card-thumb">
+                <img src="./images/ins.png" alt="Inspiration has no Borders — веб-сайт" />
+                <div class="card-overlay">
+                  <p class="card-overlay-text">
+                    Ресурс пропонує комплексні пропозиції з різним рівнем
+                    функціоналу та сервісів. Все це дозволить відвідувачу отримати
+                    вичерпні відомості про компанію чи приватну особу.
+                  </p>
+                </div>
+              </div>
+              <h2>Inspiration has no Borders</h2>
+              <p class="card-subtitle">Веб-сайт</p>
+            </li>
+
+            <li class="card">
+              <div class="card-thumb">
+                <img src="./images/Limited.png" alt="Limited Edition — видання, дизайн" />
+                <div class="card-overlay">
+                  <p class="card-overlay-text">
+                    Ресурс пропонує комплексні пропозиції з різним рівнем
+                    функціоналу та сервісів. Все це дозволить відвідувачу отримати
+                    вичерпні відомості про компанію чи приватну особу.
+                  </p>
+                </div>
+              </div>
+              <h2>Видання Limited Edition</h2>
+              <p class="card-subtitle">Дизайн</p>
+            </li>
+
+            <li class="card">
+              <div class="card-thumb">
+                <img src="./images/LAb.png" alt="Проєкт LAB — маркетинг" />
+                <div class="card-overlay">
+                  <p class="card-overlay-text">
+                    Ресурс пропонує комплексні пропозиції з різним рівнем
+                    функціоналу та сервісів. Все це дозволить відвідувачу отримати
+                    вичерпні відомості про компанію чи приватну особу.
+                  </p>
+                </div>
+              </div>
+              <h2>Проєкт LAB</h2>
+              <p class="card-subtitle">Маркетинг</p>
+            </li>
+
+            <li class="card">
+              <div class="card-thumb">
+                <img src="./images/Growing.png" alt="Growing Business — додаток" />
+                <div class="card-overlay">
+                  <p class="card-overlay-text">
+                    Ресурс пропонує комплексні пропозиції з різним рівнем
+                    функціоналу та сервісів. Все це дозволить відвідувачу отримати
+                    вичерпні відомості про компанію чи приватну особу.
+                  </p>
+                </div>
+              </div>
+              <h2>Growing Business</h2>
+              <p class="card-subtitle">Додаток</p>
+            </li>
+          </ul>
+        </main>
+      </div>
     </section>
 
     <footer class="footer" id="contacts">
@@ -287,7 +268,6 @@
         </div>
       </div>
     </footer>
-
 
     <script src="./js/modal.js"></script>
   </body>

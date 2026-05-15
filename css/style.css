@@ -642,10 +642,15 @@ body {
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
 }
 
+/* ============================================================
+   PORTFOLIO
+   ============================================================ */
+
 .portfolio {
     padding-top: 94px;
 }
 
+/* --- Завдання 2: overlay виїжджає знизу --- */
 .card-thumb {
     position: relative;
     overflow: hidden;
@@ -659,7 +664,10 @@ body {
     height: 100%;
     background-color: var(--color-overlay-card);
     padding: 63px 24px;
+
+    /* Початковий стан: прихований за нижньою межею картки */
     transform: translateY(100%);
+    /* Анімація: 250ms, cubic-bezier як в умові */
     transition: transform var(--transition-duration) var(--transition-timing);
 }
 
@@ -670,11 +678,13 @@ body {
     color: var(--color-text-white);
 }
 
+/* Оверлей виїжджає при ховері або фокусі в будь-якому місці картки */
 .card:hover .card-overlay,
 .card:focus-within .card-overlay {
     transform: translateY(0);
 }
 
+/* ---- кнопки фільтру ---- */
 .btn-list {
     display: flex;
     justify-content: center;
@@ -724,11 +734,13 @@ body {
 }
 
 .card {
-    width: 370px;
-    border: 1px solid var(--color-bg-card-border);
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
+    box-shadow:
+        0px 1px 3px 0px rgba(0, 0, 0, 0.12),
+        0px 1px 1px 0px rgba(0, 0, 0, 0.14),
+        0px 2px 1px 0px rgba(0, 0, 0, 0.20);
     transition: box-shadow var(--transition-duration) var(--transition-timing);
 }
 
@@ -766,6 +778,10 @@ body {
 }
 
 
+/* ============================================================
+   ЗАВДАННЯ 1: Анімація модального вікна
+   ============================================================ */
+
 .backdrop {
     position: fixed;
     top: 0;
@@ -777,11 +793,12 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    /* Анімуємо прозорість і видимість backdrop */
     transition: opacity var(--transition-duration) var(--transition-timing),
                 visibility var(--transition-duration) var(--transition-timing);
 }
 
-
+/* Стан "відкрито" — modal у нормальному масштабі і видимий */
 .modal {
     position: relative;
     width: 528px;
@@ -793,6 +810,20 @@ body {
         0px 2px 1px rgba(0, 0, 0, 0.2),
         0px 1px 1px rgba(0, 0, 0, 0.14),
         0px 1px 3px rgba(0, 0, 0, 0.12);
+
+    /* Початковий (відкритий) стан */
+    transform: scale(1);
+    opacity: 1;
+
+    /* Анімація трансформації і прозорості: 250ms, той самий easing */
+    transition: transform var(--transition-duration) var(--transition-timing),
+                opacity var(--transition-duration) var(--transition-timing);
+}
+
+/* Стан "закрито" — modal стиснутий і прозорий */
+.backdrop.is-hidden .modal {
+    transform: scale(0.7);
+    opacity: 0;
 }
 
 .modal-close-btn {
