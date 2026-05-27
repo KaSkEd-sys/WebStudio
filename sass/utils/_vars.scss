@@ -1,0 +1,33 @@
+:root {
+    
+    --color-accent: #2196F3;
+    --color-accent-dark: #0a7cc4;
+
+    
+    --color-bg-dark: #2F303A;
+    --color-bg-light: #F5F4FA;
+    --color-bg-white: #FFFFFF;
+    --color-bg-card-border: #EEEEEE;
+
+    
+    --color-text-primary: #212121;
+    --color-text-secondary: #757575;
+    --color-text-white: #FFFFFF;
+    --color-text-white-muted: rgba(255, 255, 255, 0.6);
+    --color-text-black: #000000;
+
+    
+    --color-icon-muted: #AFB1B8;
+    --color-border-modal: rgba(33, 33, 33, 0.2);
+    --color-border-footer-input: rgba(255, 255, 255, 0.3);
+    --color-bg-footer-input: rgba(255, 255, 255, 0.1);
+    --color-bg-footer-social: rgba(255, 255, 255, 0.1);
+    --color-overlay-services: rgba(47, 48, 58, 0.8);
+    --color-overlay-card: rgba(33, 150, 243, 0.9);
+    --color-backdrop: rgba(0, 0, 0, 0.2);
+    --color-modal-close-border: rgba(0, 0, 0, 0.1);
+
+    
+    --transition-duration: 250ms;
+    --transition-timing: cubic-bezier(0.4, 0, 0.2, 1);
+}

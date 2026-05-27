@@ -1,0 +1,99 @@
+.team {
+    display: block;
+    font-family: "Roboto";
+    padding-top: 94px;
+    padding-bottom: 94px;
+    background-color: var(--color-bg-light);
+}
+
+.team-title {
+    margin-top: 30px;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 100%;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.team-role {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 100%;
+    color: var(--color-text-secondary);
+    margin-top: 10px;
+}
+
+.team-list {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.team-member {
+    text-align: center;
+    flex: 1;
+    background: var(--color-bg-white);
+    border-radius: 0 0 4px 4px;
+    box-shadow:
+        0px 1px 0px 0px rgba(0, 0, 0, 0.20),
+        0px 1px 1px 0px rgba(0, 0, 0, 0.14),
+        0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+}
+
+.team-name {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 100%;
+    color: var(--color-text-primary);
+    margin-top: 30px;
+}
+
+.team-image {
+    width: 100%;
+    aspect-ratio: 270 / 260;
+    object-fit: cover;
+    display: block;
+}
+
+.team-social {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin-top: 16px;
+    padding-bottom: 30px;
+}
+
+.team-social-link {
+    padding: 12px;
+    border-radius: 50%;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-icon-muted);
+    text-decoration: none;
+    transition: background-color var(--transition-duration) var(--transition-timing),
+                color var(--transition-duration) var(--transition-timing);
+}
+
+.team-social-link:hover,
+.team-social-link:focus {
+    background-color: var(--color-accent);
+    color: var(--color-text-white);
+}
+
+.team-social-icon {
+    width: 20px;
+    height: 20px;
+    fill: currentColor;
+}
+
+.team-social-link:hover .team-social-icon {
+  animation: spinOnce 400ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.social-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
