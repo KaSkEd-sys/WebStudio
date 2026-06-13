@@ -1,0 +1,61 @@
+@mixin transition($properties...) {
+    $result: (
+    );
+
+@each $prop in $properties {
+    $result: append($result,
+            #{$prop} var(--transition-duration) var(--transition-timing),
+            comma);
+}
+
+transition: $result;
+}
+
+
+@mixin section-padding($top: 94px, $bottom: 94px) {
+    padding-top: $top;
+    padding-bottom: $bottom;
+}
+
+
+@mixin flex-row($gap: 0, $justify: flex-start) {
+    display: flex;
+    gap: $gap;
+    justify-content: $justify;
+}
+
+
+@mixin hover-accent($property: color) {
+
+    &:hover,
+    &:focus {
+        #{$property}: var(--color-accent);
+    }
+}
+
+
+
+@mixin btn-accent($padding: 10px 32px) {
+    padding: $padding;
+    background-color: var(--color-accent);
+    color: var(--color-text-white);
+    border: none;
+    border-radius: 4px;
+    font-weight: 700;
+    cursor: pointer;
+    @include transition(background-color, box-shadow);
+
+    &:hover,
+    &:focus {
+        background-color: var(--color-accent-dark);
+    }
+}
+
+
+
+@mixin bg-cover($url) {
+    background-image: url($url);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}

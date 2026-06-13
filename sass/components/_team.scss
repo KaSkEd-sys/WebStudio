@@ -1,23 +1,19 @@
+@use '../utils/mixins' as *;
+@use '../utils/placeholders' as *;
+
 .team {
+    @include section-padding;
     display: block;
     font-family: "Roboto";
-    padding-top: 94px;
-    padding-bottom: 94px;
     background-color: var(--color-bg-light);
 
     &__title {
+        @extend %section-title;
         margin-top: 30px;
-        font-weight: 700;
-        font-size: 36px;
-        line-height: 100%;
-        text-align: center;
-        margin-bottom: 50px;
     }
 
     &__list {
-        display: flex;
-        justify-content: space-between;
-        gap: 30px;
+        @include flex-row(30px, space-between);
     }
 
     &__member {
@@ -32,10 +28,9 @@
     }
 
     &__photo {
-        width: 100%;
+        @extend %img-block;
         aspect-ratio: 270 / 260;
         object-fit: cover;
-        display: block;
     }
 
     &__name {
@@ -55,24 +50,17 @@
     }
 
     &__social {
-        display: flex;
-        gap: 10px;
-        justify-content: center;
+        @include flex-row(10px, center);
         margin-top: 16px;
         padding-bottom: 30px;
     }
 
     &__social-link {
-        padding: 12px;
-        border-radius: 50%;
+        @extend %social-icon-btn;
+        @extend %link-reset;
         background-color: transparent;
-        display: flex;
-        align-items: center;
-        justify-content: center;
         color: var(--color-icon-muted);
-        text-decoration: none;
-        transition: background-color var(--transition-duration) var(--transition-timing),
-            color var(--transition-duration) var(--transition-timing);
+        @include transition(background-color, color);
 
         &:hover,
         &:focus {
@@ -90,10 +78,4 @@
         height: 20px;
         fill: currentColor;
     }
-}
-
-.footer__social {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
 }

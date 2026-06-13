@@ -1,12 +1,13 @@
+@use '../utils/mixins' as *;
+@use '../utils/placeholders' as *;
+
 .contacts {
     &__list {
-        display: flex;
-        gap: 50px;
+        @include flex-row(50px);
     }
 
     &__item {
-        display: flex;
-        align-items: center;
+        @extend %flex-center;
         gap: 10px;
 
         &:hover .contacts__icon,
@@ -16,24 +17,21 @@
     }
 
     &__link {
+        @extend %link-reset;
         color: var(--color-text-secondary);
-        text-decoration: none;
         font-weight: 500;
         font-size: 14px;
         line-height: 1.14;
         letter-spacing: 0.02em;
-        transition: color var(--transition-duration) var(--transition-timing);
+        @include transition(color);
 
-        &:hover,
-        &:focus {
-            color: var(--color-accent);
-        }
+        @include hover-accent(color);
     }
 
     &__icon {
         width: 16px;
         height: 16px;
         fill: var(--color-text-secondary);
-        transition: fill var(--transition-duration) var(--transition-timing);
+        @include transition(fill);
     }
 }

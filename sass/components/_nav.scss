@@ -1,24 +1,23 @@
+@use '../utils/mixins' as *;
+@use '../utils/placeholders' as *;
+
 .nav {
     &__list {
-        display: flex;
+        @include flex-row(50px);
         flex-direction: row;
-        gap: 50px;
     }
 
     &__link {
+        @extend %link-reset;
         font-family: "Roboto";
         font-weight: 500;
         font-size: 14px;
         line-height: 1.5;
         letter-spacing: 0.02em;
         color: var(--color-text-primary);
-        text-decoration: none;
-        transition: color var(--transition-duration) var(--transition-timing);
+        @include transition(color);
 
-        &:hover,
-        &:focus {
-            color: var(--color-accent);
-        }
+        @include hover-accent(color);
 
         &--active {
             color: var(--color-accent);

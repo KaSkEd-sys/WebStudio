@@ -1,11 +1,12 @@
+@use '../utils/mixins' as *;
+@use '../utils/placeholders' as *;
+
 .features {
+    @include section-padding;
     font-family: "Roboto";
-    padding-top: 94px;
-    padding-bottom: 94px;
 
     &__list {
-        display: flex;
-        gap: 30px;
+        @include flex-row(30px);
     }
 
     &__item {
@@ -47,12 +48,10 @@
     }
 
     &__icon-box {
+        @extend %flex-center;
         max-width: 100%;
         background-color: var(--color-bg-light);
         border-radius: 4px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
         padding: 25px 0;
         margin-bottom: 30px;
 

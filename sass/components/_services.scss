@@ -1,16 +1,15 @@
+@use '../utils/mixins' as *;
+@use '../utils/placeholders' as *;
+
 .services {
-    padding-bottom: 94px;
+    @include section-padding(0, 94px);
 
     &__title {
-        text-align: center;
-        font-size: 36px;
-        margin-bottom: 50px;
+        @extend %section-title;
     }
 
     &__list {
-        display: flex;
-        justify-content: space-between;
-        gap: 30px;
+        @include flex-row(30px, space-between);
     }
 
     &__item {
@@ -19,20 +18,18 @@
     }
 
     &__image {
-        display: block;
-        width: 100%;
+        @extend %img-block;
         height: 100%;
     }
 
     &__label {
-        position: absolute;
+        @extend %flex-center;
+        @extend %overlay;
+        bottom: auto;
+        top: auto;
         bottom: 0;
-        left: 0;
-        width: 100%;
+        height: auto;
         padding: 27px 0;
-        display: flex;
-        align-items: center;
-        justify-content: center;
         background: var(--color-overlay-services);
         color: var(--color-text-white);
         font-weight: 700;

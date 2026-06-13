@@ -1,4 +1,6 @@
 @use 'utils/vars';
+@use 'utils/placeholders';
+@use 'utils/mixins';
 @use 'utils/common';
 @use 'components/header';
 @use 'components/nav';

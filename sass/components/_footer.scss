@@ -1,3 +1,6 @@
+@use '../utils/mixins' as *;
+@use '../utils/placeholders' as *;
+
 .footer {
     background-color: var(--color-bg-dark);
     padding: 60px 0;
@@ -9,18 +12,17 @@
     }
 
     &__address {
-        display: flex;
-        flex-direction: column;
+        @extend %flex-column;
         min-width: 231px;
     }
 
     &__logo {
+        @extend %link-reset;
         display: block;
         font-family: 'Raleway', sans-serif;
         font-weight: 700;
         font-size: 26px;
         color: var(--color-accent);
-        text-decoration: none;
         line-height: 1;
         margin-bottom: 9px;
         letter-spacing: 0.03em;
@@ -32,9 +34,7 @@
     }
 
     &__address-list {
-        list-style: none;
-        padding: 0;
-        margin: 0;
+        @extend %list-reset;
     }
 
     &__address-item {
@@ -50,9 +50,9 @@
     }
 
     &__address-link {
+        @extend %link-reset;
         color: var(--color-text-white-muted);
-        text-decoration: none;
-        transition: color var(--transition-duration) var(--transition-timing);
+        @include transition(color);
 
         &:hover,
         &:focus {
@@ -69,23 +69,20 @@
         letter-spacing: 0.03em;
     }
 
+    &__social {
+        @extend %flex-column;
+        justify-content: flex-start;
+    }
+
     &__social-list {
-        display: flex;
-        gap: 10px;
-        list-style: none;
-        padding: 0;
-        margin: 0;
+        @extend %list-reset;
+        @include flex-row(10px);
     }
 
     &__social-item {
-        padding: 12px;
-        border-radius: 50%;
+        @extend %social-icon-btn;
+        @extend %flex-center;
         background-color: var(--color-bg-footer-social);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        cursor: pointer;
-        transition: background-color var(--transition-duration) var(--transition-timing);
 
         &:hover,
         &:focus {
