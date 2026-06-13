@@ -1,37 +1,39 @@
-.contact-list {
-    display: flex;
-    gap: 50px;
-}
+.contacts {
+    &__list {
+        display: flex;
+        gap: 50px;
+    }
 
-.contact-item {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
+    &__item {
+        display: flex;
+        align-items: center;
+        gap: 10px;
 
-.contact-icon {
-    width: 16px;
-    height: 16px;
-    fill: var(--color-text-secondary);
-    transition: fill var(--transition-duration) var(--transition-timing);
-}
+        &:hover .contacts__icon,
+        &:focus-within .contacts__icon {
+            fill: var(--color-accent);
+        }
+    }
 
-.contact-item:hover .contact-icon,
-.contact-item:focus-within .contact-icon {
-    fill: var(--color-accent);
-}
+    &__link {
+        color: var(--color-text-secondary);
+        text-decoration: none;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 1.14;
+        letter-spacing: 0.02em;
+        transition: color var(--transition-duration) var(--transition-timing);
 
-.contact-item a {
-    color: var(--color-text-secondary);
-    text-decoration: none;
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 1.14;
-    letter-spacing: 0.02em;
-    transition: color var(--transition-duration) var(--transition-timing);
-}
+        &:hover,
+        &:focus {
+            color: var(--color-accent);
+        }
+    }
 
-.contact-item a:hover,
-.contact-item a:focus {
-    color: var(--color-accent);
+    &__icon {
+        width: 16px;
+        height: 16px;
+        fill: var(--color-text-secondary);
+        transition: fill var(--transition-duration) var(--transition-timing);
+    }
 }
