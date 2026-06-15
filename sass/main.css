@@ -82,7 +82,7 @@
   overflow: hidden;
 }
 
-.services__label, .card__overlay, .backdrop {
+.card__overlay, .backdrop {
   position: absolute;
   top: 0;
   left: 0;
@@ -1106,9 +1106,10 @@ ul {
   height: 100%;
 }
 .services__label {
-  bottom: auto;
-  top: auto;
+  position: absolute;
   bottom: 0;
+  left: 0;
+  width: 100%;
   height: auto;
   padding: 27px 0;
   background: var(--color-overlay-services);

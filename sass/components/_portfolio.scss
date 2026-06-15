@@ -1,57 +1,33 @@
 @use '../utils/mixins' as *;
 @use '../utils/placeholders' as *;
 
-.footer__newsletter {
-    @extend %flex-column;
-    justify-content: flex-start;
-}
-
-.newsletter {
-    @include flex-row(8px);
-    width: 100%;
-
-    &__input {
-        flex: 1;
-        min-width: 0;
-        padding: 15px 16px;
-        border: 1px solid var(--color-border-footer-input);
-        border-radius: 4px;
-        background-color: var(--color-bg-footer-input);
-        color: var(--color-text-white);
-        font-size: 14px;
-        outline: none;
-        @include transition(border-color);
-
-        &::placeholder {
-            color: var(--color-text-white-muted);
-        }
-
-        &:focus {
-            border-color: var(--color-accent);
-        }
-    }
-
-    &__btn {
-        @include btn-accent(15px 28px);
-        min-width: 200px;
-        font-size: 14px;
-        white-space: nowrap;
-
-        &:hover,
-        &:focus {
-            box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
-        }
-    }
-}
-
 .portfolio {
-    padding-top: 94px;
+
+    padding-top: 60px;
+
+    @media (min-width: 1200px) {
+        padding-top: 94px;
+    }
 }
 
 .filter {
     @extend %list-reset;
-    @include flex-row(8px, center);
-    padding-bottom: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    justify-content: flex-start;
+    padding-bottom: 40px;
+
+
+    @media (min-width: 480px) {
+        justify-content: center;
+    }
+
+
+    @media (min-width: 768px) {
+        flex-wrap: nowrap;
+        padding-bottom: 50px;
+    }
 
     &__btn {
         font-family: "Roboto";
@@ -67,6 +43,7 @@
         cursor: pointer;
         @include transition(background-color, color, box-shadow);
 
+        &--active,
         &:hover,
         &:focus {
             background-color: var(--color-accent);
@@ -75,19 +52,43 @@
                 0px 2px 2px 0px rgba(0, 0, 0, 0.12),
                 0px 1px 2px 0px rgba(0, 0, 0, 0.08),
                 0px 3px 1px 0px rgba(0, 0, 0, 0.10);
+        }
+
+        &:hover,
+        &:focus {
             animation: btnBounce 300ms cubic-bezier(0.4, 0, 0.2, 1);
         }
     }
 }
 
 .portfolio__content {
-    padding-bottom: 94px;
+    padding-bottom: 60px;
+
+    @media (min-width: 1200px) {
+        padding-bottom: 94px;
+    }
 }
 
 .portfolio__list {
+
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: 1fr;
     gap: 30px;
+
+
+    @media (min-width: 480px) {
+        grid-template-columns: 1fr;
+    }
+
+
+    @media (min-width: 768px) {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+
+    @media (min-width: 1200px) {
+        grid-template-columns: repeat(3, 1fr);
+    }
 }
 
 .card {

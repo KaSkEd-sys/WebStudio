@@ -2,7 +2,15 @@
 @use '../utils/placeholders' as *;
 
 .services {
-    @include section-padding(0, 94px);
+
+
+    @media (max-width: 1199px) {
+        display: none;
+    }
+
+    @media (min-width: 1200px) {
+        @include section-padding(0, 94px);
+    }
 
     &__title {
         @extend %section-title;
@@ -24,10 +32,10 @@
 
     &__label {
         @extend %flex-center;
-        @extend %overlay;
-        bottom: auto;
-        top: auto;
+        position: absolute;
         bottom: 0;
+        left: 0;
+        width: 100%;
         height: auto;
         padding: 27px 0;
         background: var(--color-overlay-services);

@@ -3,7 +3,14 @@
 
 .contacts {
     &__list {
-        @include flex-row(50px);
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+
+        @media (min-width: 1200px) {
+            flex-direction: row;
+            gap: 50px;
+        }
     }
 
     &__item {
@@ -20,18 +27,27 @@
         @extend %link-reset;
         color: var(--color-text-secondary);
         font-weight: 500;
-        font-size: 14px;
+        font-size: 12px;
         line-height: 1.14;
         letter-spacing: 0.02em;
         @include transition(color);
-
         @include hover-accent(color);
+
+
+        @media (min-width: 1200px) {
+            font-size: 14px;
+        }
     }
 
     &__icon {
-        width: 16px;
-        height: 16px;
+        width: 14px;
+        height: 14px;
         fill: var(--color-text-secondary);
         @include transition(fill);
+
+        @media (min-width: 1200px) {
+            width: 16px;
+            height: 16px;
+        }
     }
 }
